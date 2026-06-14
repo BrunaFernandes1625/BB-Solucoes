@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B&B Soluções | Pequenos Reparos Residenciais em Curitiba</title>
+<meta name="description" content="Pequenos reparos, instalações e manutenção residencial realizados por mulheres em Curitiba e Região Metropolitana.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--vinho:#6B0F1A;--dourado:#C89B3C;--bege:#F7F3EE}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+html{scroll-behavior:smooth} body{background:var(--bege);color:#333}
+header{position:fixed;top:0;width:100%;z-index:999;background:rgba(107,15,26,.92);padding:15px 5%;display:flex;justify-content:space-between}
+nav a{color:#fff;text-decoration:none;margin:0 12px}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('bannerbb.jpeg') center/cover fixed;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+.hero h1{font-size:4rem;max-width:900px}
+.hero p{font-size:1.2rem;margin:20px auto;max-width:700px}
+.btn{display:inline-block;padding:16px 30px;background:#25D366;color:#fff;text-decoration:none;border-radius:10px}
+section{padding:90px 8%}
+h2{text-align:center;color:var(--vinho);margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:#fff;padding:25px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.4s}
+.card:hover{transform:translateY(-10px)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.num{font-size:3rem;color:var(--dourado);font-weight:bold}
+.timeline div{background:#fff;padding:18px;margin:15px 0;border-left:5px solid var(--dourado)}
+.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.portfolio img{width:100%;height:250px;object-fit:cover;border-radius:15px;cursor:pointer}
+.faq-item{background:#fff;margin:10px 0;border-radius:10px}
+.faq-q{padding:15px;font-weight:bold;cursor:pointer}
+.faq-a{display:none;padding:15px}
+.whatsapp{position:fixed;right:20px;bottom:20px;width:70px;height:70px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:35px;text-decoration:none;animation:pulse 2s infinite;z-index:999}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);justify-content:center;align-items:center;z-index:9999}
+.lightbox img{max-width:90%;max-height:90%}
+footer{background:var(--vinho);color:#fff;text-align:center;padding:40px}
+.reveal{opacity:0;transform:translateY(40px);transition:.8s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:768px){.hero h1{font-size:2.2rem}header{flex-direction:column}.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><strong style="color:#fff">B&B Soluções</strong><nav><a href="#servicos">Serviços</a><a href="#quem">Quem Somos</a><a href="#portfolio">Portfólio</a><a href="#faq">FAQ</a><a href="#contato">Contato</a></nav></header>
+
+<section class="hero">
+<div>
+<h1>Sua casa precisa de ajuda? Nós resolvemos.</h1>
+<p>Pequenos reparos, instalações e manutenção residencial realizados por mulheres em Curitiba e Região Metropolitana.</p>
+<a class="btn" href="https://wa.me/5541985381967">Solicitar Orçamento</a>
+</div>
+</section>
+
+<section class="reveal">
+<h2>Nosso Diferencial</h2>
+<div class="grid">
+<div class="card"><h3>Atendimento realizado por mulheres</h3><p>Mais conforto, confiança e segurança.</p></div>
+<div class="card"><h3>Orçamento transparente</h3><p>Sem cobranças inesperadas.</p></div>
+<div class="card"><h3>Cuidado com seu lar</h3><p>Respeito aos detalhes.</p></div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="stats">
+<div><div class="num" data-target="500">0</div><p>Serviços</p></div>
+<div><div class="num" data-target="300">0</div><p>Clientes</p></div>
+<div><div class="num" data-target="98">0</div><p>Satisfação %</p></div>
+</div>
+</section>
+
+<section id="servicos" class="reveal">
+<h2>Serviços</h2>
+<div class="grid">
+<div class="card">Pequenos Reparos Residenciais</div>
+<div class="card">Instalações Elétricas Simples</div>
+<div class="card">Instalações Hidráulicas Simples</div>
+<div class="card">Instalações Residenciais</div>
+<div class="card">Pequenas Montagens</div>
+<div class="card">Serviços Sob Consulta</div>
+</div>
+</section>
+
+<section class="reveal"><h2>Como Funciona</h2>
+<div class="timeline">
+<div>1. Contato pelo WhatsApp</div>
+<div>2. Avaliação da necessidade</div>
+<div>3. Orçamento transparente</div>
+<div>4. Execução do serviço</div>
+</div></section>
+
+<section id="quem" class="reveal"><h2>Quem Somos</h2><p>Substitua este texto pela história completa da B&B Soluções.</p></section>
+
+<section class="reveal"><h2>Procurando um Marido de Aluguel em Curitiba?</h2><p>A B&B Soluções é uma alternativa moderna aos serviços tradicionais de faz-tudo e manutenção residencial.</p></section>
+
+<section id="portfolio" class="reveal"><h2>Portfólio</h2>
+<div class="portfolio">
+<img src="servico1.jpeg"><img src="servico2.jpeg"><img src="servico3.jpeg"><img src="servico4.jpeg"><img src="servico5.jpeg">
+<img src="servico6.jpeg"><img src="servico7.jpeg"><img src="servico8.jpeg"><img src="servico9.jpeg"><img src="servico10.jpeg">
+</div></section>
+
+<section id="faq" class="reveal"><h2>FAQ</h2>
+<div class="faq-item"><div class="faq-q">Vocês atendem apartamentos?</div><div class="faq-a">Sim.</div></div>
+<div class="faq-item"><div class="faq-q">Atendem finais de semana?</div><div class="faq-a">Sob consulta.</div></div>
+<div class="faq-item"><div class="faq-q">Serviços não listados?</div><div class="faq-a">Avaliaremos sua necessidade.</div></div>
+</section>
+
+<section id="contato" class="reveal"><h2>Contato</h2>
+<p>WhatsApp: (41) 98538-1967</p>
+<p>Facebook: https://www.facebook.com/share/1B4UJ4tHtz/</p>
+<p>Curitiba e Região Metropolitana</p>
+</section>
+
+<footer>Pequenos Reparos Residenciais • Instalações Residenciais • Manutenção Residencial • Serviços de Faz-Tudo • Marido de Aluguel em Curitiba e Região Metropolitana</footer>
+
+<a class="whatsapp" href="https://wa.me/5541985381967"><i class="fab fa-whatsapp"></i></a>
+
+<div class="lightbox" id="lb"><img id="lbimg"></div>
+
+<script>
+document.querySelectorAll('.portfolio img').forEach(i=>i.onclick=()=>{lb.style.display='flex';lbimg.src=i.src});
+lb.onclick=()=>lb.style.display='none';
+
+document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>{
+let a=q.nextElementSibling;a.style.display=a.style.display==='block'?'none':'block';
+});
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+document.querySelectorAll('.num').forEach(n=>{
+let t=+n.dataset.target,c=0;
+let i=setInterval(()=>{c+=Math.ceil(t/50);if(c>=t){c=t;clearInterval(i)}n.textContent=c;},30);
+});
+</script>
+</body></html>
