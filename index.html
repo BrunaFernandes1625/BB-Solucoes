@@ -6,38 +6,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>B&B Soluções | Elas Resolvem!</title>
+<title>B&B Soluções | Pequenos Reparos e Instalações em Curitiba</title>
 
 <meta name="description" content="Pequenos reparos, instalações e manutenção residencial realizados por mulheres em Curitiba e Região Metropolitana.">
 
-<meta name="keywords" content="marido de aluguel curitiba, faz tudo curitiba, pequenos reparos curitiba, manutenção residencial curitiba">
+<meta name="keywords" content="marido de aluguel curitiba, faz tudo curitiba, manutenção residencial curitiba, pequenos reparos curitiba, instalações residenciais curitiba">
 
 <meta name="robots" content="index, follow">
 <meta name="author" content="B&B Soluções">
 
-<link rel="icon" href="logobb.jpeg">
-
 <meta property="og:title" content="B&B Soluções">
-<meta property="og:description" content="Pequenos reparos e instalações residenciais em Curitiba e Região Metropolitana.">
+<meta property="og:description" content="Pequenos reparos, instalações e manutenção residencial em Curitiba e Região Metropolitana.">
 <meta property="og:image" content="bannerbb.jpeg">
 <meta property="og:type" content="website">
+
+<link rel="icon" href="logobb.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
+/* ==========================
+CORES OFICIAIS
+========================== */
+
 :root{
---bordo:#6B1020;
+
+--bordo:#65111C;
+--bordo-dark:#4A0C14;
+
 --dourado:#C89B3C;
+
 --claro:#F7F3EE;
---escuro:#2B0710;
+
+--branco:#FFFFFF;
+
+--texto:#404040;
+
 }
+
+/* ==========================
+RESET
+========================== */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
 }
 
 html{
@@ -45,367 +65,868 @@ scroll-behavior:smooth;
 }
 
 body{
+
+font-family:'Montserrat',sans-serif;
+
 background:var(--claro);
-color:#333;
+
+color:var(--texto);
+
 overflow-x:hidden;
+
 }
 
+/* ==========================
+HEADER
+========================== */
+
 header{
+
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
+
 z-index:9999;
 
-background:var(--bordo);
+background:rgba(101,17,28,.97);
+
+backdrop-filter:blur(10px);
+
+padding:12px 7%;
 
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
-padding:12px 6%;
+box-shadow:0 5px 25px rgba(0,0,0,.15);
 
-box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
 
 .logo img{
+
 height:95px;
+
 transition:.3s;
+
+}
+
+.logo img:hover{
+
+transform:scale(1.03);
+
 }
 
 nav{
+
 display:flex;
+
 gap:10px;
+
 }
 
 nav a{
+
 color:white;
+
 text-decoration:none;
-padding:10px 15px;
-border-radius:8px;
+
 font-weight:600;
+
+padding:10px 16px;
+
+border-radius:10px;
+
 transition:.3s;
+
 }
 
 nav a:hover{
-background:rgba(255,255,255,.15);
+
+background:rgba(255,255,255,.12);
+
 }
 
+/* ==========================
+BANNER PREMIUM
+========================== */
+
 .hero{
+
+margin:145px 25px 30px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+position:relative;
+
+min-height:72vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:70px 25px;
+
 background:
+
 linear-gradient(
 rgba(0,0,0,.55),
 rgba(0,0,0,.55)
 ),
+
 url('bannerbb.jpeg');
+
 background-size:cover;
+
 background-position:center;
-min-height:70vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-margin:140px 25px 25px;
-border-radius:25px;
-padding:50px 20px;
+
+}
+
+.hero-content{
+
+max-width:1000px;
+
+}
+
+.hero-tag{
+
+display:inline-block;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.18);
+
+padding:10px 18px;
+
+border-radius:50px;
+
 color:white;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+margin-bottom:25px;
+
+backdrop-filter:blur(8px);
+
 }
 
 .hero h1{
-font-size:72px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:95px;
+
+line-height:1;
+
 font-weight:700;
-letter-spacing:2px;
-text-transform:none;
-font-family:Georgia, serif;
+
 color:white;
-text-shadow:0 3px 15px rgba(0,0,0,.3);
-margin-bottom:15px;
+
+margin-bottom:10px;
+
 }
 
 .hero-slogan{
-font-size:30px;
-font-weight:700;
+
+font-size:28px;
+
+font-weight:600;
+
 color:var(--dourado);
-margin-bottom:20px;
+
+letter-spacing:3px;
+
+margin-bottom:25px;
+
 }
 
-.hero p{
+.hero-text{
+
+font-size:24px;
+
+line-height:1.8;
+
+color:white;
+
 max-width:900px;
+
 margin:auto;
-font-size:22px;
-line-height:1.6;
+
 }
 
 .hero-frase{
-margin-top:20px;
-font-size:20px;
+
+margin-top:25px;
+
+font-size:22px;
+
 font-style:italic;
+
+color:#F8E7B0;
+
 }
 
 .hero-buttons{
-margin-top:35px;
+
+margin-top:40px;
+
 display:flex;
+
 justify-content:center;
+
 gap:15px;
+
 flex-wrap:wrap;
+
 }
 
 .btn{
-padding:16px 28px;
-border-radius:10px;
-font-weight:bold;
+
+padding:18px 32px;
+
+border-radius:12px;
+
+font-weight:700;
+
 text-decoration:none;
+
 transition:.3s;
+
 }
 
-.btn-whats{
+.btn-primary{
+
 background:white;
+
 color:var(--bordo);
+
 }
 
-.btn-servicos{
+.btn-secondary{
+
 background:white;
+
 color:var(--bordo);
+
 }
 
 .btn:hover{
+
 transform:translateY(-4px);
+
 }
 
-.hero-destaques{
-
-margin-top:45px;
-
-display:grid;
-grid-template-columns:repeat(4,1fr);
-
-gap:15px;
-}
-
-.hero-card{
-background:rgba(255,255,255,.12);
-padding:20px;
-border-radius:15px;
-backdrop-filter:blur(8px);
-}
-
-.hero-card i{
-font-size:30px;
-color:var(--dourado);
-margin-bottom:10px;
-}
+/* ==========================
+SEÇÕES
+========================== */
 
 section{
-padding:80px 8%;
+
+padding:100px 8%;
+
 }
 
-h2{
+.section-title{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:58px;
+
 text-align:center;
-font-size:42px;
+
 color:var(--bordo);
+
 margin-bottom:15px;
+
 }
 
-.section-desc{
+.section-subtitle{
+
 max-width:850px;
+
 margin:auto;
+
 text-align:center;
-margin-bottom:45px;
+
+line-height:1.8;
+
+margin-bottom:60px;
+
 }
+
+/* ==========================
+CARDS
+========================== */
 
 .cards{
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:25px;
-}
-
-.contato-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-@media(max-width:900px){
-
-.contato-grid{
-grid-template-columns:1fr;
-}
 
 }
-  
+
 .card{
+
 background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+padding:35px;
+
+border-radius:22px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
 transition:.3s;
-cursor:pointer;
+
 }
 
 .card:hover{
+
 transform:translateY(-8px);
+
 }
 
 .card i{
+
 font-size:45px;
+
 color:var(--dourado);
-margin-bottom:15px;
+
+margin-bottom:18px;
+
 }
 
 .card h3{
+
 color:var(--bordo);
+
 margin-bottom:10px;
+
 }
 
-.quem-somos{
-background:white;
-}
+/* ==========================
+RESPONSIVO
+========================== */
 
-.quem-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.quem-grid img{
-width:100%;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.15);
-}
-
-.destaque{
-background:var(--claro);
-padding:15px;
-margin-top:12px;
-border-left:5px solid var(--dourado);
-border-radius:10px;
-}
-
-.portfolio{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.portfolio img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:18px;
-cursor:pointer;
-transition:.4s;
-box-shadow:0 5px 15px rgba(0,0,0,.12);
-}
-
-.portfolio img:hover{
-transform:scale(1.04);
-}
-
-.portfolio-item{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.portfolio-item:hover{
-transform:translateY(-8px);
-}
-
-.portfolio-item p{
-padding:15px;
-text-align:center;
-font-weight:600;
-color:var(--bordo);
-}
-
-.destaque-seo{
-background:white;
-max-width:1200px;
-margin:auto;
-padding:35px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-border-top:6px solid var(--dourado);
-}
-
-.destaque-seo-icon{
-font-size:55px;
-color:var(--dourado);
-margin-bottom:20px;
-}
-
-.destaque-seo p{
-max-width:850px;
-margin:15px auto;
-line-height:1.8;
-}
-  
 @media(max-width:900px){
 
-.portfolio{
-grid-template-columns:1fr;
+header{
+
+flex-direction:column;
+
+padding:10px;
+
 }
 
-header{
-flex-direction:column;
-padding:10px;
+.logo img{
+
+height:75px;
+
 }
 
 nav{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-width:100%;
-gap:5px;
-margin-top:10px;
-}
 
-nav a{
-font-size:12px;
-text-align:center;
-padding:8px;
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+width:100%;
+
+margin-top:10px;
+
 }
 
 .hero{
-margin:140px 10px 10px;
-padding:40px 15px;
+
+margin:150px 10px 15px;
+
+min-height:auto;
+
+padding:50px 20px;
+
 }
 
 .hero h1{
-font-size:38px;
+
+font-size:55px;
+
 }
 
 .hero-slogan{
+
 font-size:22px;
+
 }
 
-.hero p{
-font-size:16px;
-}
+.hero-text{
 
-.hero-destaques{
-grid-template-columns:repeat(2,1fr);
+font-size:18px;
+
 }
 
 .cards{
+
 grid-template-columns:1fr;
+
 }
 
-.faq-container{
+.section-title{
+
+font-size:40px;
+
+}
+
+}
+
+/* ==========================
+PORTFÓLIO
+========================== */
+
+.portfolio{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.portfolio-item{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.portfolio-item:hover{
+
+transform:translateY(-8px);
+
+}
+
+.portfolio-item img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.portfolio-item p{
+
+padding:18px;
+
+font-weight:600;
+
+text-align:center;
+
+}
+
+/* ==========================
+QUEM SOMOS
+========================== */
+
+.quem-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+align-items:center;
+
+}
+
+.quem-grid img{
+
+width:100%;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.destaque{
+
+background:white;
+
+padding:12px 18px;
+
+border-radius:12px;
+
+margin-top:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+font-weight:600;
+
+}
+
+@media(max-width:900px){
+
+.quem-grid{
+
 grid-template-columns:1fr;
+
+}
+
 }
   
-.quem-grid{
-grid-template-columns:1fr;
+/* ==========================
+FAQ PREMIUM
+========================== */
+
+.faq-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+max-width:1200px;
+
+margin:auto;
+
 }
 
-h2{
-font-size:30px;
+.faq-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:22px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
 }
+
+.faq-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.faq-card h3{
+
+color:var(--bordo);
+
+margin-bottom:15px;
+
+}
+
+.faq-card p{
+
+line-height:1.8;
+
+}
+
+/* ==========================
+SEO BOX
+========================== */
+
+.seo-box{
+
+background:white;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:45px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+border-top:6px solid var(--dourado);
+
+}
+
+.seo-box i{
+
+font-size:60px;
+
+color:var(--dourado);
+
+margin-bottom:20px;
+
+}
+
+.seo-box h2{
+
+color:var(--bordo);
+
+margin-bottom:20px;
+
+}
+
+.seo-box p{
+
+max-width:900px;
+
+margin:15px auto;
+
+line-height:1.9;
+
+}
+
+@media(max-width:900px){
+
+.faq-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================
+CONTATOS
+========================== */
+
+.contato-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.contato-card{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.contato-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+
+background:var(--bordo);
+
+color:white;
+
+padding:35px 20px;
+
+text-align:center;
+
+border-top:4px solid var(--dourado);
+
+}
+
+footer img{
+
+height:70px;
+
+margin-bottom:15px;
+
+}
+
+footer h3{
+
+color:var(--dourado);
+
+margin-bottom:8px;
+
+}
+
+.footer-slogan{
+
+margin-bottom:20px;
+
+opacity:.9;
+
+}
+
+.footer-info{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-bottom:20px;
+
+}
+
+.footer-copy{
+
+font-size:13px;
+
+opacity:.8;
+
+}
+
+/* ==========================
+WHATSAPP
+========================== */
+
+.whatsapp-float{
+
+position:fixed;
+
+right:20px;
+
+bottom:20px;
+
+width:68px;
+
+height:68px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+z-index:9999;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+animation:pulse 2s infinite;
+
+}
+
+.whatsapp-float i{
+
+font-size:34px;
+
+color:white;
+
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(37,211,102,.6);
+}
+
+70%{
+box-shadow:0 0 0 18px rgba(37,211,102,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+}
+
+}
+
+/* ==========================
+LIGHTBOX
+========================== */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.92);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+cursor:pointer;
+
+}
+
+.lightbox img{
+
+max-width:92%;
+
+max-height:92%;
+
+border-radius:15px;
+
+}
+
+/* ==========================
+RESPONSIVO
+========================== */
+
+@media(max-width:900px){
+
+.contato-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-info{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
 }
 
 </style>
@@ -431,33 +952,49 @@ font-size:30px;
 
 <section class="hero">
 
-<div>
+<div class="hero-content">
 
-<h1>B&B SOLUÇÕES</h1>
-
-<div class="hero-slogan">
-ELAS RESOLVEM!
+<div class="hero-tag">
+ATENDIMENTO EM CURITIBA E REGIÃO METROPOLITANA
 </div>
 
-<p>
-Soluções práticas para sua casa, com confiança e profissionalismo.
-</p>
+<h1>B&B Soluções</h1>
+
+<div class="hero-slogan">
+ELAS RESOLVEM
+</div>
+
+<div class="hero-text">
+
+Mais conforto, praticidade e segurança para o seu dia a dia.
+
+<br><br>
+
+Reparos, instalações e manutenção residencial em Curitiba e Região Metropolitana.
+
+</div>
 
 <div class="hero-frase">
-Mais conforto, praticidade e segurança para quem precisa de ajuda dentro de casa.
+
+Atendimento profissional, cuidadoso e de confiança.
+
 </div>
 
 <div class="hero-buttons">
 
-<a class="btn btn-whats"
-href="https://wa.me/5541985381967"
-target="_blank">
+<a href="https://wa.me/5541985381967"
+target="_blank"
+class="btn btn-primary">
+
 Solicitar Orçamento
+
 </a>
 
-<a class="btn btn-servicos"
-href="#servicos">
+<a href="#servicos"
+class="btn btn-secondary">
+
 Conhecer Serviços
+
 </a>
 
 </div>
@@ -466,40 +1003,48 @@ Conhecer Serviços
 
 </section>
 
-<section id="quem" class="quem-somos">
+<!-- ==========================
+QUEM SOMOS
+========================== -->
 
-<h2>Quem Somos</h2>
+<section id="quem">
+
+<h2 class="section-title">
+Quem Somos
+</h2>
+
+<p class="section-subtitle">
+
+A B&B Soluções nasceu da experiência prática e da vontade de oferecer um atendimento mais confortável, confiável e acolhedor para quem precisa de ajuda dentro de casa.
+
+</p>
 
 <div class="quem-grid">
 
 <div>
 
-<img src="bannerbb.jpeg">
+<img src="bannerbb.jpeg" alt="B&B Soluções">
 
 </div>
 
 <div>
 
-<p>
-A B&B Soluções nasceu de uma situação real que vivemos de perto.
+<p style="line-height:2; margin-bottom:20px;">
+
+Desde pequenas convivemos com reparos, instalações e manutenção residencial. Aprendemos na prática a resolver problemas do dia a dia e entendemos que muitas pessoas precisam de alguém de confiança para cuidar desses serviços.
+
 </p>
 
-<br>
+<p style="line-height:2; margin-bottom:20px;">
 
-<p>
-Desde pequenas aprendemos a realizar reparos, instalações e manutenções acompanhando obras e trabalhos do dia a dia. Sempre fomos acostumadas a resolver as coisas por conta própria.
+A ideia da B&B Soluções surgiu quando percebemos uma necessidade real: muitas mulheres, idosos e pessoas que moram sozinhas gostariam de contar com um atendimento que transmitisse mais segurança e tranquilidade dentro de casa.
+
 </p>
 
-<br>
+<p style="line-height:2;">
 
-<p>
-Quando uma familiar passou a morar sozinha, percebemos uma dificuldade comum: muitas mulheres não se sentem totalmente confortáveis em receber homens desconhecidos dentro de casa para realizar pequenos serviços.
-</p>
+Hoje oferecemos pequenos reparos, instalações e manutenção residencial com profissionalismo, atenção aos detalhes e respeito ao cliente.
 
-<br>
-
-<p>
-Foi assim que surgiu a B&B Soluções. Unimos nossa experiência prática com o desejo de oferecer um atendimento profissional, confiável e acolhedor para quem busca ajuda em casa.
 </p>
 
 <div class="destaque">
@@ -511,19 +1056,87 @@ Foi assim que surgiu a B&B Soluções. Unimos nossa experiência prática com o 
 </div>
 
 <div class="destaque">
-🛠️ Experiência prática em reparos residenciais
+🛠️ Atendimento profissional
+</div>
+
+<div class="destaque">
+📍 Curitiba e Região Metropolitana
+</div>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- ==========================
+NÚMEROS DE CONFIANÇA
+========================== -->
+
+<section style="background:white;">
+
+<h2 class="section-title">
+Compromisso com Qualidade
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fas fa-user-shield"></i>
+
+<h3>Atendimento Seguro</h3>
+
+<p>
+Respeito, transparência e profissionalismo em cada visita.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-clock"></i>
+
+<h3>Hora Marcada</h3>
+
+<p>
+Valorizamos seu tempo e cumprimos os horários combinados.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-star"></i>
+
+<h3>Capricho nos Detalhes</h3>
+
+<p>
+Serviços realizados com cuidado e atenção em cada etapa.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+SERVIÇOS
+========================== -->
+
 <section id="servicos">
 
-<h2>Soluções para o Dia a Dia da Sua Casa</h2>
+<h2 class="section-title">
+Soluções para o Dia a Dia da Sua Casa
+</h2>
 
-<p class="section-desc">
-Realizamos pequenos reparos, instalações e manutenções residenciais com praticidade, cuidado e atenção aos detalhes.
+<p class="section-subtitle">
+
+Realizamos diversos pequenos reparos, instalações e manutenções residenciais.
+
+Se não encontrou exatamente o que procura, entre em contato e consulte a disponibilidade do serviço.
+
 </p>
 
 <div class="cards">
@@ -531,13 +1144,13 @@ Realizamos pequenos reparos, instalações e manutenções residenciais com prat
 <div class="card">
 <i class="fas fa-shower"></i>
 <h3>Chuveiros</h3>
-<p>Instalação, troca e pequenos reparos.</p>
+<p>Troca, instalação e pequenos reparos.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-faucet"></i>
 <h3>Torneiras</h3>
-<p>Troca, instalação e correção de vazamentos simples.</p>
+<p>Troca, instalação e ajustes simples.</p>
 </div>
 
 <div class="card">
@@ -549,19 +1162,19 @@ Realizamos pequenos reparos, instalações e manutenções residenciais com prat
 <div class="card">
 <i class="fas fa-plug"></i>
 <h3>Tomadas e Interruptores</h3>
-<p>Troca e instalação básica.</p>
+<p>Instalação e substituição.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-tv"></i>
 <h3>Suporte para TV</h3>
-<p>Instalação e fixação.</p>
+<p>Fixação e instalação.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-window-maximize"></i>
 <h3>Cortinas e Persianas</h3>
-<p>Instalação e ajustes.</p>
+<p>Instalação e regulagens.</p>
 </div>
 
 <div class="card">
@@ -573,234 +1186,357 @@ Realizamos pequenos reparos, instalações e manutenções residenciais com prat
 <div class="card">
 <i class="fas fa-chair"></i>
 <h3>Pequenas Montagens</h3>
-<p>Mesas, armários pequenos e móveis simples.</p>
+<p>Mesas, nichos e móveis simples.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-screwdriver-wrench"></i>
 <h3>Reparos em Geral</h3>
-<p>Não encontrou o que procura? Consulte-nos.</p>
+<p>Consulte-nos para outros serviços residenciais.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="portfolio">
+<!-- ==========================
+PORTFÓLIO PREMIUM
+========================== -->
 
-<h2>Portfólio</h2>
+<section id="portfolio" style="background:white;">
 
-<p class="section-desc">
-Alguns serviços realizados pela B&B Soluções.
+<h2 class="section-title">
+Portfólio
+</h2>
+
+<p class="section-subtitle">
+
+Alguns dos serviços realizados pela B&B Soluções.
+
 </p>
+
+<div class="portfolio">
 
 <div class="portfolio-item">
 <img src="servico1.jpeg" alt="">
-<p>Instalação e ajuste residencial</p>
+<p>Instalação residencial</p>
 </div>
+
 <div class="portfolio-item">
 <img src="servico2.jpeg" alt="">
-<p>Instalação e ajuste residencial</p>
+<p>Montagem e ajustes</p>
 </div>
+
 <div class="portfolio-item">
 <img src="servico3.jpeg" alt="">
-<p>Instalação e ajuste residencial</p>
+<p>Reparo residencial</p>
 </div>
+
 <div class="portfolio-item">
 <img src="servico4.jpeg" alt="">
-<p>Instalação e ajuste residencial</p>
+<p>Instalação de acessórios</p>
 </div>
+
 <div class="portfolio-item">
 <img src="servico5.jpeg" alt="">
-<p>Instalação e ajuste residencial</p>
+<p>Serviço de manutenção</p>
 </div>
+
 <div class="portfolio-item">
 <img src="servico6.jpeg" alt="">
-<p>Instalação e ajuste residencial</p>
+<p>Pequenos reparos</p>
+</div>
+
+<div class="portfolio-item">
+<img src="servico7.jpeg" alt="">
+<p>Fixação e montagem</p>
+</div>
+
+<div class="portfolio-item">
+<img src="servico8.jpeg" alt="">
+<p>Instalação residencial</p>
+</div>
+
+<div class="portfolio-item">
+<img src="servico9.jpeg" alt="">
+<p>Ajustes e melhorias</p>
+</div>
+
+<div class="portfolio-item">
+<img src="servico10.jpeg" alt="">
+<p>Serviço concluído</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- ==========================
+COMO FUNCIONA
+========================== -->
+
 <section>
 
-<h2>Como Funciona</h2>
+<h2 class="section-title">
+Como Funciona
+</h2>
 
-<p class="section-desc">
+<p class="section-subtitle">
+
 Um processo simples, rápido e transparente.
+
 </p>
 
 <div class="cards">
 
 <div class="card">
+
 <i class="fab fa-whatsapp"></i>
+
 <h3>1. Entre em Contato</h3>
-<p>Envie uma mensagem pelo WhatsApp.</p>
+
+<p>
+Envie uma mensagem pelo WhatsApp.
+</p>
+
 </div>
 
 <div class="card">
-<i class="fas fa-comments"></i>
-<h3>2. Explique o Serviço</h3>
-<p>Conte o que precisa e envie fotos.</p>
+
+<i class="fas fa-camera"></i>
+
+<h3>2. Envie Fotos</h3>
+
+<p>
+Mostre o serviço para uma avaliação mais rápida.
+</p>
+
 </div>
 
 <div class="card">
+
 <i class="fas fa-file-invoice-dollar"></i>
+
 <h3>3. Receba o Orçamento</h3>
-<p>Sem surpresas e com transparência.</p>
+
+<p>
+Tudo de forma clara e transparente.
+</p>
+
 </div>
 
 <div class="card">
+
 <i class="fas fa-calendar-check"></i>
+
 <h3>4. Agende</h3>
-<p>Escolha o melhor horário.</p>
+
+<p>
+Escolha o melhor dia e horário.
+</p>
+
 </div>
 
 <div class="card">
+
 <i class="fas fa-tools"></i>
-<h3>5. Executamos</h3>
-<p>Serviço realizado com cuidado e atenção.</p>
+
+<h3>5. Execução</h3>
+
+<p>
+Serviço realizado com cuidado e atenção.
+</p>
+
 </div>
 
 <div class="card">
+
 <i class="fas fa-face-smile"></i>
+
 <h3>6. Problema Resolvido</h3>
-<p>Mais praticidade para você.</p>
+
+<p>
+Mais praticidade e tranquilidade para você.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section style="background:#f3ede8;">
+<!-- ==========================
+DIFERENCIAIS PREMIUM
+========================== -->
 
-<h2>Por Que Escolher a B&B Soluções?</h2>
+<section style="background:#f4efe8;">
+
+<h2 class="section-title">
+Por Que Escolher a B&B Soluções?
+</h2>
+
+<p class="section-subtitle">
+
+Mais do que realizar serviços, buscamos oferecer uma experiência tranquila, profissional e de confiança.
+
+</p>
 
 <div class="cards">
 
 <div class="card">
 <i class="fas fa-user-shield"></i>
 <h3>Atendimento por Mulheres</h3>
-<p>Mais conforto para quem mora sozinho.</p>
+<p>
+Mais conforto para quem mora sozinho ou prefere um atendimento feminino.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-clock"></i>
+<h3>Compromisso com Horários</h3>
+<p>
+Respeitamos seu tempo e buscamos cumprir o horário combinado.
+</p>
 </div>
 
 <div class="card">
 <i class="fas fa-heart"></i>
 <h3>Atendimento Humanizado</h3>
-<p>Respeito e cordialidade em cada serviço.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-clock"></i>
-<h3>Hora Marcada</h3>
-<p>Compromisso com horários.</p>
+<p>
+Tratamos cada cliente com respeito, cordialidade e atenção.
+</p>
 </div>
 
 <div class="card">
 <i class="fas fa-location-dot"></i>
 <h3>Curitiba e Região Metropolitana</h3>
-<p>Atendimento em toda a região.</p>
+<p>
+Atendimento em toda a região metropolitana de Curitiba.
+</p>
 </div>
 
 <div class="card">
 <i class="fas fa-screwdriver-wrench"></i>
-<h3>Serviços Diversos</h3>
-<p>Várias soluções em um único lugar.</p>
+<h3>Diversos Serviços</h3>
+<p>
+Uma solução prática para várias necessidades da sua casa.
+</p>
 </div>
 
 <div class="card">
 <i class="fas fa-star"></i>
-<h3>Capricho e Qualidade</h3>
-<p>Atenção aos detalhes em cada serviço.</p>
+<h3>Capricho nos Detalhes</h3>
+<p>
+Serviços executados com cuidado e atenção ao acabamento.
+</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- ==========================
+FAQ PREMIUM
+========================== -->
 
 <section id="faq">
 
-<h2>Perguntas Frequentes</h2>
+<h2 class="section-title">
+Perguntas Frequentes
+</h2>
 
-<p class="section-desc">
+<p class="section-subtitle">
+
 Algumas dúvidas comuns dos nossos clientes.
+
 </p>
 
-<div class="faq-container">
+<div class="faq-grid">
 
-<div class="faq-item">
-<button class="faq-question">
-Vocês atendem homens?
-<i class="fas fa-plus"></i>
-</button>
-<div class="faq-answer">
-<p>Sim. Atendemos qualquer pessoa que precise de pequenos reparos e instalações residenciais.</p>
-</div>
+<div class="faq-card">
+<h3>Vocês atendem homens?</h3>
+<p>
+Sim. Atendemos qualquer pessoa que precise de pequenos reparos e instalações residenciais.
+</p>
 </div>
 
-<div class="faq-item">
-<button class="faq-question">
-Vocês montam guarda-roupas?
-<i class="fas fa-plus"></i>
-</button>
-<div class="faq-answer">
-<p>Não realizamos montagens complexas. Fazemos apenas pequenas montagens como mesas, nichos, prateleiras e móveis simples.</p>
-</div>
+<div class="faq-card">
+<h3>Vocês montam guarda-roupas?</h3>
+<p>
+Não realizamos montagens complexas. Trabalhamos apenas com pequenas montagens e móveis simples.
+</p>
 </div>
 
-<div class="faq-item">
-<button class="faq-question">
-Atendem toda Curitiba?
-<i class="fas fa-plus"></i>
-</button>
-<div class="faq-answer">
-<p>Sim. Atendemos Curitiba e Região Metropolitana.</p>
-</div>
+<div class="faq-card">
+<h3>Atendem toda Curitiba?</h3>
+<p>
+Sim. Atendemos Curitiba e toda a Região Metropolitana.
+</p>
 </div>
 
-<div class="faq-item">
-<button class="faq-question">
-Posso pedir orçamento pelo WhatsApp?
-<i class="fas fa-plus"></i>
-</button>
-<div class="faq-answer">
-<p>Sim. Basta enviar uma mensagem e, se possível, fotos do serviço.</p>
-</div>
+<div class="faq-card">
+<h3>Posso pedir orçamento pelo WhatsApp?</h3>
+<p>
+Sim. Basta enviar uma mensagem e, se possível, fotos do serviço.
+</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- ==========================
+SEO PREMIUM
+========================== -->
 
 <section>
 
-<div class="destaque-seo">
+<div class="seo-box">
 
-<div class="destaque-seo-icon">
 <i class="fas fa-house-circle-check"></i>
-</div>
 
-<h2>Procurando um Marido de Aluguel em Curitiba?</h2>
+<h2>
+Procurando um Marido de Aluguel em Curitiba?
+</h2>
 
 <p>
+
 Muitas pessoas procuram por marido de aluguel, faz tudo ou pequenos reparos residenciais quando precisam resolver problemas do dia a dia da casa.
+
 </p>
 
 <p>
-A B&B Soluções oferece instalações, manutenções e pequenos reparos com um diferencial importante: atendimento realizado por mulheres, proporcionando mais conforto, praticidade e confiança para quem precisa de ajuda dentro de casa.
+
+A B&B Soluções oferece instalações, manutenções e pequenos reparos com um diferencial importante: atendimento realizado por mulheres, proporcionando mais conforto, praticidade e confiança.
+
 </p>
+
+<a href="https://wa.me/5541985381967"
+target="_blank"
+class="btn btn-primary">
+
+Solicitar Orçamento
+
+</a>
 
 </div>
 
 </section>
 
-<section id="contato">
+<!-- ==========================
+CONTATO PREMIUM
+========================== -->
 
-<h2>Solicite um Orçamento</h2>
+<section id="contato" style="background:white;">
 
-<p class="section-desc">
+<h2 class="section-title">
+Solicite um Orçamento
+</h2>
+
+<p class="section-subtitle">
+
 Escolha a forma de contato que preferir.
+
 </p>
 
 <div class="contato-grid">
@@ -810,8 +1546,12 @@ href="https://wa.me/5541985381967"
 target="_blank">
 
 <i class="fab fa-whatsapp"></i>
+
 <h3>WhatsApp</h3>
-<p>(41) 98538-1967</p>
+
+<p>
+(41) 98538-1967
+</p>
 
 </a>
 
@@ -819,8 +1559,12 @@ target="_blank">
 href="mailto:bbsolucoes1@gmail.com">
 
 <i class="fas fa-envelope"></i>
+
 <h3>E-mail</h3>
-<p>bbsolucoes1@gmail.com</p>
+
+<p>
+bbsolucoes1@gmail.com
+</p>
 
 </a>
 
@@ -829,18 +1573,24 @@ href="https://www.facebook.com/share/1B4UJ4tHtz/"
 target="_blank">
 
 <i class="fab fa-facebook"></i>
+
 <h3>Facebook</h3>
-<p>B&B Soluções</p>
+
+<p>
+B&B Soluções
+</p>
 
 </a>
 
-<a class="card contato-card"
-href="https://maps.google.com"
-target="_blank">
+<a class="card contato-card">
 
 <i class="fas fa-location-dot"></i>
+
 <h3>Atendimento</h3>
-<p>Curitiba e Região Metropolitana</p>
+
+<p>
+Curitiba e Região Metropolitana
+</p>
 
 </a>
 
@@ -848,34 +1598,21 @@ target="_blank">
 
 </section>
 
+<!-- ==========================
+RODAPÉ PREMIUM
+========================== -->
+
 <footer>
 
-<img src="logobb.jpeg"
-style="height:60px;
-height:85px;
-display:block;
-margin:auto;
-margin-bottom:15px;
-">
+<img src="logobb.jpeg" alt="B&B Soluções">
 
-<h3 style="
-color:var(--dourado);
-margin-bottom:10px;
-">
-B&B Soluções
-</h3>
+<h3>B&B Soluções</h3>
 
-<p style="opacity:.9;">
-Pequenos Reparos • Instalações • Manutenção Residencial
+<p class="footer-slogan">
+Elas Resolvem
 </p>
 
-<div style="
-margin-top:20px;
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-">
+<div class="footer-info">
 
 <span>📱 (41) 98538-1967</span>
 
@@ -885,15 +1622,17 @@ flex-wrap:wrap;
 
 </div>
 
-<p style="
-margin-top:20px;
-font-size:13px;
-opacity:.8;
-">
+<p class="footer-copy">
+
 © 2026 B&B Soluções • Todos os direitos reservados
+
 </p>
 
 </footer>
+
+<!-- ==========================
+WHATSAPP FIXO
+========================== -->
 
 <a class="whatsapp-float"
 href="https://wa.me/5541985381967"
@@ -903,143 +1642,35 @@ target="_blank">
 
 </a>
 
+<!-- ==========================
+LIGHTBOX
+========================== -->
+
 <div id="lightbox" class="lightbox">
+
 <img id="lightbox-img">
+
 </div>
-
-<style>
-
-.faq-container{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-max-width:1200px;
-margin:auto;
-}
-
-.faq-item{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.faq-item:hover{
-transform:translateY(-5px);
-}
-
-.faq-question{
-width:100%;
-padding:22px;
-border:none;
-background:white;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-display:flex;
-justify-content:space-between;
-align-items:center;
-color:var(--bordo);
-}
-
-.faq-answer{
-display:none;
-padding:20px;
-border-top:1px solid #eee;
-line-height:1.6;
-}
-
-.contato-card{
-text-decoration:none;
-color:#333;
-}
-
-footer{
-background:var(--bordo);
-color:white;
-text-align:center;
-padding:18px 20px;
-border-top:3px solid var(--dourado);
-}
-
-.whatsapp-float{
-position:fixed;
-right:20px;
-bottom:20px;
-width:65px;
-height:65px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-text-decoration:none;
-z-index:9999;
-box-shadow:0 5px 20px rgba(0,0,0,.25);
-animation:pulse 2s infinite;
-}
-
-.whatsapp-float i{
-font-size:34px;
-color:white;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
-70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
-}
-
-.lightbox{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.9);
-justify-content:center;
-align-items:center;
-z-index:99999;
-}
-
-.lightbox img{
-max-width:95%;
-max-height:95%;
-border-radius:10px;
-}
-
-</style>
 
 <script>
 
-document.querySelectorAll('.faq-question').forEach(btn=>{
+/* LIGHTBOX */
 
-btn.addEventListener('click',()=>{
+const imagens =
+document.querySelectorAll('.portfolio-item img');
 
-const answer = btn.nextElementSibling;
+const lightbox =
+document.getElementById('lightbox');
 
-if(answer.style.display === 'block'){
-answer.style.display='none';
-}else{
-answer.style.display='block';
-}
-
-});
-
-});
-
-const imagens = document.querySelectorAll('.portfolio img');
-
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+const lightboxImg =
+document.getElementById('lightbox-img');
 
 imagens.forEach(img=>{
 
 img.addEventListener('click',()=>{
 
 lightbox.style.display='flex';
+
 lightboxImg.src=img.src;
 
 });
