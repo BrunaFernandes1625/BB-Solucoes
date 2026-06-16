@@ -27,7 +27,7 @@
 <style>
 
 :root{
---bordo:#5A0D17;
+--bordo:#64101B;
 --dourado:#C89B3C;
 --claro:#F7F3EE;
 --escuro:#2B0710;
@@ -63,13 +63,14 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:12px 6%;
+padding:18px 6%;
 
 box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
 
 .logo img{
-height:60px;
+height:95px;
+transition:.3s;
 }
 
 nav{
@@ -102,7 +103,7 @@ url('bannerbb.jpeg');
 background-size:cover;
 background-position:center;
 
-min-height:90vh;
+min-height:70vh;
 
 display:flex;
 justify-content:center;
@@ -110,19 +111,21 @@ align-items:center;
 
 text-align:center;
 
-margin:110px 25px 25px;
+margin:140px 25px 25px;
 
 border-radius:25px;
 
-padding:80px 20px;
+padding:50px 20px;
 
 color:white;
 }
 
 .hero h1{
-font-size:72px;
+font-size:82px;
 font-weight:900;
 margin-bottom:10px;
+letter-spacing:4px;
+text-shadow:0 4px 20px rgba(0,0,0,.35);
 }
 
 .hero-slogan{
@@ -226,6 +229,23 @@ grid-template-columns:repeat(3,1fr);
 gap:25px;
 }
 
+.contato-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+}
+
+@media(max-width:900px){
+
+.contato-grid{
+grid-template-columns:1fr;
+}
+
+}
+  
 .card{
 background:white;
 
@@ -301,6 +321,71 @@ box-shadow:0 5px 15px rgba(0,0,0,.12);
 transform:scale(1.04);
 }
 
+.portfolio-item{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+}
+
+.portfolio-item:hover{
+transform:translateY(-8px);
+}
+
+.portfolio-item p{
+
+padding:15px;
+
+text-align:center;
+
+font-weight:600;
+
+color:var(--bordo);
+}
+
+.destaque-seo{
+
+background:white;
+
+max-width:1000px;
+
+margin:auto;
+
+padding:50px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+border-top:6px solid var(--dourado);
+}
+
+.destaque-seo-icon{
+
+font-size:55px;
+
+color:var(--dourado);
+
+margin-bottom:20px;
+}
+
+.destaque-seo p{
+
+max-width:850px;
+
+margin:15px auto;
+
+line-height:1.8;
+}
+  
 @media(max-width:900px){
 
 header{
@@ -347,6 +432,10 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 
+.faq-container{
+grid-template-columns:1fr;
+}
+
 .quem-grid{
 grid-template-columns:1fr;
 }
@@ -388,7 +477,7 @@ ELAS RESOLVEM!
 </div>
 
 <p>
-Pequenos reparos, instalações e manutenção residencial realizados por mulheres em Curitiba e Região Metropolitana.
+Soluções práticas para sua casa, com confiança e profissionalismo.
 </p>
 
 <div class="hero-frase">
@@ -407,30 +496,6 @@ Solicitar Orçamento
 href="#servicos">
 Conhecer Serviços
 </a>
-
-</div>
-
-<div class="hero-destaques">
-
-<div class="hero-card">
-<i class="fas fa-user-shield"></i>
-<p>Atendimento por Mulheres</p>
-</div>
-
-<div class="hero-card">
-<i class="fas fa-clock"></i>
-<p>Hora Marcada</p>
-</div>
-
-<div class="hero-card">
-<i class="fas fa-file-invoice-dollar"></i>
-<p>Orçamento Transparente</p>
-</div>
-
-<div class="hero-card">
-<i class="fas fa-location-dot"></i>
-<p>Curitiba e Região Metropolitana</p>
-</div>
 
 </div>
 
@@ -484,12 +549,6 @@ Foi assim que surgiu a B&B Soluções. Unimos nossa experiência prática com o 
 
 <div class="destaque">
 🛠️ Experiência prática em reparos residenciais
-</div>
-
-<div class="destaque">
-📍 Curitiba e Região Metropolitana
-</div>
-
 </div>
 
 </div>
@@ -572,18 +631,30 @@ Realizamos pequenos reparos, instalações e manutenções residenciais com prat
 Alguns serviços realizados pela B&B Soluções.
 </p>
 
-<div class="portfolio">
-
+<div class="portfolio-item">
 <img src="servico1.jpeg" alt="">
+<p>Instalação e ajuste residencial</p>
+</div>
+<div class="portfolio-item">
 <img src="servico2.jpeg" alt="">
+<p>Instalação e ajuste residencial</p>
+</div>
+<div class="portfolio-item">
 <img src="servico3.jpeg" alt="">
+<p>Instalação e ajuste residencial</p>
+</div>
+<div class="portfolio-item">
 <img src="servico4.jpeg" alt="">
+<p>Instalação e ajuste residencial</p>
+</div>
+<div class="portfolio-item">
 <img src="servico5.jpeg" alt="">
+<p>Instalação e ajuste residencial</p>
+</div>
+<div class="portfolio-item">
 <img src="servico6.jpeg" alt="">
-<img src="servico7.jpeg" alt="">
-<img src="servico8.jpeg" alt="">
-<img src="servico9.jpeg" alt="">
-<img src="servico10.jpeg" alt="">
+<p>Instalação e ajuste residencial</p>
+</div>
 
 </div>
 
@@ -741,15 +812,23 @@ Posso pedir orçamento pelo WhatsApp?
 
 <section>
 
+<div class="destaque-seo">
+
+<div class="destaque-seo-icon">
+<i class="fas fa-house-circle-check"></i>
+</div>
+
 <h2>Procurando um Marido de Aluguel em Curitiba?</h2>
 
-<p class="section-desc">
-Muitas pessoas procuram por marido de aluguel, faz tudo ou pequenos reparos residenciais em Curitiba quando precisam resolver problemas do dia a dia da casa.
+<p>
+Muitas pessoas procuram por marido de aluguel, faz tudo ou pequenos reparos residenciais quando precisam resolver problemas do dia a dia da casa.
 </p>
 
-<p style="max-width:900px;margin:auto;text-align:center;line-height:1.8;">
-A B&B Soluções oferece instalações, manutenção residencial e pequenos reparos com um diferencial importante: atendimento realizado por mulheres, proporcionando mais conforto, praticidade e confiança para quem precisa de ajuda dentro de casa.
+<p>
+A B&B Soluções oferece instalações, manutenções e pequenos reparos com um diferencial importante: atendimento realizado por mulheres, proporcionando mais conforto, praticidade e confiança para quem precisa de ajuda dentro de casa.
 </p>
+
+</div>
 
 </section>
 
@@ -761,7 +840,7 @@ A B&B Soluções oferece instalações, manutenção residencial e pequenos repa
 Escolha a forma de contato que preferir.
 </p>
 
-<div class="cards">
+<div class="contato-grid">
 
 <a class="card contato-card"
 href="https://wa.me/5541985381967"
@@ -808,21 +887,48 @@ target="_blank">
 
 <footer>
 
-<img src="logobb.jpeg" style="height:70px;margin:auto;margin-bottom:20px;display:block;">
+<img src="logobb.jpeg"
+style="
+height:85px;
+display:block;
+margin:auto;
+margin-bottom:15px;
+">
 
-<p><strong>B&B Soluções</strong></p>
+<h3 style="
+color:var(--dourado);
+margin-bottom:10px;
+">
+B&B Soluções
+</h3>
 
-<p>Elas Resolvem!</p>
+<p style="opacity:.9;">
+Pequenos Reparos • Instalações • Manutenção Residencial
+</p>
 
-<br>
+<div style="
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+">
 
-<p>📱 (41) 98538-1967</p>
-<p>📧 bbsolucoes1@gmail.com</p>
-<p>📍 Curitiba e Região Metropolitana</p>
+<span>📱 (41) 98538-1967</span>
 
-<br>
+<span>📧 bbsolucoes1@gmail.com</span>
 
-<p>© 2026 Todos os direitos reservados</p>
+<span>📍 Curitiba e Região Metropolitana</span>
+
+</div>
+
+<p style="
+margin-top:20px;
+font-size:13px;
+opacity:.8;
+">
+© 2026 B&B Soluções • Todos os direitos reservados
+</p>
 
 </footer>
 
@@ -841,35 +947,69 @@ target="_blank">
 <style>
 
 .faq-container{
-max-width:900px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+max-width:1200px;
+
 margin:auto;
 }
 
 .faq-item{
+
 background:white;
-margin-bottom:15px;
-border-radius:12px;
+
+border-radius:18px;
+
 overflow:hidden;
-box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+}
+
+.faq-item:hover{
+transform:translateY(-5px);
 }
 
 .faq-question{
+
 width:100%;
-padding:20px;
+
+padding:22px;
+
 border:none;
+
 background:white;
+
 font-size:16px;
+
 font-weight:bold;
+
 cursor:pointer;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
+color:var(--bordo);
 }
 
 .faq-answer{
+
 display:none;
+
 padding:20px;
+
 border-top:1px solid #eee;
+
+line-height:1.6;
 }
 
 .contato-card{
@@ -878,10 +1018,11 @@ color:#333;
 }
 
 footer{
-background:#5A0D17;
+background:var(--bordo);
 color:white;
 text-align:center;
-padding:50px 20px;
+padding:30px 20px;
+border-top:3px solid var(--dourado);
 }
 
 .whatsapp-float{
