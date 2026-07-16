@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B&B Soluções | Pequenos Reparos, Instalações e Locação em Curitiba</title>
-    <meta name="description" content="Pequenos reparos, instalações residenciais e locação de extratoras e lavadoras em Curitiba. Serviço cuidadoso por mulheres com segurança e hora marcada.">
+    <title>B&B Soluções | Manutenção Residencial e Locação em Curitiba e RM</title>
+    <meta name="description" content="Pequenos reparos, instalações residenciais e locação de extratoras e lavadoras em Curitiba e Região Metropolitana. Serviço por mulheres com segurança.">
     <meta name="keywords" content="marido de aluguel curitiba, faz tudo curitiba, locação de extratora curitiba, aluguel lavadora alta pressão curitiba, pequenos reparos curitiba">
     <meta name="robots" content="index, follow">
     <meta name="author" content="B&B Soluções">
 
     <meta property="og:title" content="B&B Soluções">
-    <meta property="og:description" content="Pequenos reparos, instalações e locação de extratoras e lavadoras em Curitiba.">
+    <meta property="og:description" content="Pequenos reparos, instalações e locação de extratoras e lavadoras em Curitiba e Região Metropolitana.">
     <meta property="og:image" content="bannerbb.jpeg">
     <meta property="og:type" content="website">
 
@@ -23,17 +23,20 @@
 
     <style>
         /* ==========================
-        PALETA DE CORES EQUILIBRADA (60-30-10)
+        PALETA DE CORES CONFORTÁVEL (SEM BRANCO OFUSCANTE)
         ========================== */
         :root {
-            --bordo: #5C0F19;           /* Bordô mais profundo e sofisticado */
-            --bordo-suave: #F4EAEB;     /* Tom pastel de bordô para fundos sutis */
-            --dourado: #B88E30;         /* Dourado escovado, chique e profissional (não amarelo vivo) */
-            --claro-fundo: #FAF9F6;     /* Off-white ultra confortável para os olhos */
-            --branco: #FFFFFF;
-            --texto: #2D2D2D;           /* Cinza quase preto para excelente legibilidade */
-            --texto-suave: #555555;     /* Cinza médio para descrições */
+            --bordo: #5C0F19;           
+            --bordo-suave: #F3EAEB;     
+            --dourado: #B88E30;         
+            --claro-fundo: #F7F4F0;     /* Fundo principal creme, super suave aos olhos */
+            --claro-alternado: #EFEBE4; /* Fundo secundário cinza/areia confortável */
+            --branco-card: #FAF8F5;     /* Branco quebrado e fosco para as caixas */
+            --texto: #2D2D2D;           
+            --texto-suave: #5A5A5A;     
             --verde-whatsapp: #25D366;
+            --azul-maps: #4285F4;
+            --vermelho-gmail: #EA4335;
         }
 
         /* ==========================
@@ -58,32 +61,51 @@
         }
 
         section {
-            padding: 90px 8%; 
+            padding: 80px 8%; 
         }
 
-        .bg-white {
-            background-color: var(--branco);
+        .bg-confort {
+            background-color: var(--claro-fundo);
         }
 
-        .bg-suave {
-            background-color: var(--bordo-suave);
+        .bg-alternado {
+            background-color: var(--claro-alternado);
+        }
+
+        /* DESTREZA E DESTAQUE DE TÍTULOS */
+        .title-wrapper {
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .section-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 40px; 
-            text-align: center;
+            font-size: 46px; 
             color: var(--bordo);
-            margin-bottom: 10px;
             font-weight: 700;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--dourado);
         }
 
         .section-subtitle {
-            max-width: 700px;
-            margin: 0 auto 50px; 
-            text-align: center;
+            max-width: 750px;
+            margin: 0 auto; 
             font-size: 16px;
             color: var(--texto-suave);
+            font-weight: 500;
         }
 
         /* ==========================
@@ -100,14 +122,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             height: 80px; 
         }
 
         .logo img {
             height: 60px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
 
@@ -142,13 +163,13 @@
             margin: 110px 40px 40px 40px; 
             border-radius: 28px;
             position: relative;
-            min-height: 65vh; 
+            min-height: 60vh; 
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url('bannerbb.jpeg');
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('bannerbb.jpeg');
             background-size: cover;
             background-position: center;
             box-shadow: 0 12px 35px rgba(92, 15, 25, 0.15);
@@ -160,14 +181,14 @@
 
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 60px; 
+            font-size: 58px; 
             font-weight: 700;
             color: white;
             margin-bottom: 5px;
         }
 
         .hero-slogan {
-            font-size: 20px; 
+            font-size: 18px; 
             font-weight: 700;
             color: var(--dourado);
             letter-spacing: 6px;
@@ -182,25 +203,23 @@
         }
 
         .hero-frase {
-            margin-top: 20px;
-            font-size: 16px;
+            margin-top: 15px;
+            font-size: 15px;
             font-style: italic;
             color: #F8E7B0;
         }
 
         .hero-buttons {
-            margin-top: 35px; 
+            margin-top: 30px; 
             display: flex;
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 30px; 
+            padding: 14px 35px; 
             border-radius: 50px; 
             font-weight: 700;
-            font-size: 13px;
+            font-size: 14px;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-flex;
@@ -211,90 +230,79 @@
             cursor: pointer;
             background: var(--dourado);
             color: white;
+            box-shadow: 0 4px 15px rgba(184, 142, 48, 0.2);
         }
 
         .btn:hover {
             background: #967222;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(184, 142, 48, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: var(--bordo);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 20px rgba(184, 142, 48, 0.4);
         }
 
         /* ==========================
-        SERVIÇOS (REPAROS) - CLEAN & PREMIUM
+        SERVIÇOS DE REPARO - 4 COLUNAS MAIS ENXUTAS
         ========================== */
         .cards-servicos {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            grid-template-columns: repeat(4, 1fr); /* Reduzido para 4 colunas */
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .card-clean {
-            background: var(--branco);
-            padding: 35px 25px;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.04);
+            background: var(--branco-card);
+            padding: 25px 20px; /* Redução de espaço interno */
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(92, 15, 25, 0.1); /* Sutil borda no tom do logotipo */
             text-align: center;
             transition: all 0.3s ease;
         }
 
         .card-clean:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(92, 15, 25, 0.08);
-            border-color: rgba(92, 15, 25, 0.1);
+            box-shadow: 0 10px 25px rgba(92, 15, 25, 0.08);
+            border-color: var(--bordo);
         }
 
         .card-clean i {
-            font-size: 28px;
+            font-size: 24px;
             color: var(--bordo);
             background: var(--bordo-suave);
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
             border-radius: 50%;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: inline-block;
             transition: all 0.3s;
         }
 
         .card-clean:hover i {
             background: var(--bordo);
-            color: var(--branco);
+            color: white;
         }
 
         .card-clean h3 {
             color: var(--bordo);
-            font-size: 18px;
-            margin-bottom: 12px;
+            font-size: 16px;
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
         .card-clean p {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--texto-suave);
+            line-height: 1.5;
         }
 
         /* ==========================
-        LOCAÇÃO DE EQUIPAMENTOS (ELEGÂNCIA & VENDAS)
+        LOCAÇÃO DE EQUIPAMENTOS
         ========================== */
         .locacao-secao-titulo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
+            font-size: 28px;
             color: var(--bordo);
             text-align: center;
             margin: 40px 0 25px;
@@ -318,11 +326,11 @@
         }
 
         .equipamento-card {
-            background: var(--branco);
-            border-radius: 24px;
+            background: var(--branco-card);
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(92, 15, 25, 0.08);
             display: flex;
             flex-direction: column;
             transition: all 0.3s;
@@ -331,7 +339,8 @@
 
         .equipamento-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+            border-color: var(--bordo);
         }
 
         .card-badge {
@@ -339,7 +348,7 @@
             top: 15px;
             right: 15px;
             background: var(--bordo);
-            color: var(--branco);
+            color: white;
             padding: 6px 14px;
             font-weight: 700;
             font-size: 11px;
@@ -350,13 +359,13 @@
 
         .equipamento-foto {
             width: 100%;
-            height: 240px;
+            height: 220px;
             object-fit: cover;
-            border-bottom: 3px solid var(--bordo-suave);
+            border-bottom: 2px solid var(--bordo-suave);
         }
 
         .equipamento-info {
-            padding: 30px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -365,8 +374,8 @@
 
         .equipamento-info h4 {
             color: var(--bordo);
-            font-size: 19px;
-            margin-bottom: 12px;
+            font-size: 18px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -380,17 +389,23 @@
         .equipamento-info p {
             font-size: 14px;
             color: var(--texto-suave);
+            margin-bottom: 15px;
+        }
+
+        .entrega-tags-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             margin-bottom: 20px;
         }
 
         .entrega-tag {
             background: var(--bordo-suave);
             color: var(--bordo);
-            padding: 10px 14px;
-            border-radius: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
             font-size: 12px;
             font-weight: 600;
-            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -413,11 +428,11 @@
         }
 
         .antes-depois-card {
-            background: var(--branco);
-            border-radius: 24px;
+            background: var(--branco-card);
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(92, 15, 25, 0.08);
         }
 
         .antes-depois-titulo {
@@ -426,7 +441,7 @@
             text-align: center;
             padding: 15px;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
             letter-spacing: 1.5px;
         }
 
@@ -441,7 +456,7 @@
 
         .lado img {
             width: 100%;
-            height: 250px;
+            height: 230px;
             object-fit: cover;
             display: block;
         }
@@ -476,12 +491,12 @@
         }
 
         .como-card {
-            background: var(--branco);
-            padding: 40px 30px;
-            border-radius: 24px;
+            background: var(--branco-card);
+            padding: 35px 25px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(92, 15, 25, 0.08);
             position: relative;
         }
 
@@ -504,60 +519,50 @@
         }
 
         .como-card i {
-            font-size: 32px;
+            font-size: 28px;
             color: var(--bordo);
             margin: 15px 0;
         }
 
         .como-card h3 {
-            font-size: 18px;
+            font-size: 17px;
             color: var(--bordo);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
         .como-card p {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--texto-suave);
         }
 
         /* ==========================
-        QUEM SOMOS (FUNDO BORDO IMPACTANTE)
+        QUEM SOMOS (FUTURO COMPACTADO COM TÍTULO FORA)
         ========================== */
-        .quem-container-secao {
-            padding: 30px 40px; 
-        }
-
         .quem-box {
             background-color: var(--bordo);
-            color: var(--branco);
-            border-radius: 28px;
-            padding: 70px 6%;
-            box-shadow: 0 15px 35px rgba(92, 15, 25, 0.2);
-        }
-
-        .quem-box .section-title {
-            color: var(--branco);
-        }
-
-        .quem-box .section-subtitle {
-            color: rgba(255, 255, 255, 0.75);
+            color: white;
+            border-radius: 20px;
+            padding: 45px 5%;
+            box-shadow: 0 12px 30px rgba(92, 15, 25, 0.15);
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .quem-grid {
             display: grid;
-            grid-template-columns: 1fr 1.2fr; 
-            gap: 50px;
+            grid-template-columns: 1fr 1.3fr; 
+            gap: 40px;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .quem-img-container {
             width: 100%;
+            max-width: 380px; /* Reduzido o tamanho máximo da foto */
+            margin: 0 auto;
             overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
             border: 2px solid var(--dourado);
         }
 
@@ -567,31 +572,30 @@
         }
 
         .quem-content p {
-            line-height: 1.8;
-            margin-bottom: 22px;
-            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 14px; /* Mais compacto */
             color: rgba(255, 255, 255, 0.9);
         }
 
         .destaque-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .destaque {
-            background: var(--branco);
+            background: var(--branco-card);
             color: var(--bordo);
-            padding: 14px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            padding: 10px 15px;
+            border-radius: 10px;
             font-weight: 700;
-            font-size: 13px;
-            border-left: 5px solid var(--dourado);
+            font-size: 12px;
+            border-left: 4px solid var(--dourado);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         /* ==========================
@@ -606,11 +610,11 @@
         }
 
         .depoimento-card {
-            background: var(--branco);
-            padding: 35px;
-            border-radius: 24px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.03);
+            background: var(--branco-card);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(92, 15, 25, 0.08);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -618,16 +622,16 @@
 
         .estrelas {
             color: var(--dourado);
-            margin-bottom: 15px;
-            font-size: 14px;
+            margin-bottom: 12px;
+            font-size: 13px;
         }
 
         .depoimento-texto {
-            font-size: 14px;
+            font-size: 13px;
             font-style: italic;
             color: var(--texto-suave);
-            line-height: 1.7;
-            margin-bottom: 20px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         .autor-info {
@@ -637,8 +641,8 @@
         }
 
         .autor-avatar {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background: var(--bordo-suave);
             color: var(--bordo);
             font-weight: 700;
@@ -646,11 +650,11 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .autor-nome h5 {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--bordo);
             font-weight: 700;
         }
@@ -670,29 +674,31 @@
         }
 
         .portfolio-item {
-            background: white;
+            background: var(--branco-card);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(92, 15, 25, 0.05);
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .portfolio-item:hover {
             transform: scale(1.03);
+            border-color: var(--bordo);
         }
 
         .portfolio-item img {
             width: 100%;
-            height: 180px; 
+            height: 160px; 
             object-fit: cover;
             display: block;
         }
 
         .portfolio-item p {
-            padding: 10px;
+            padding: 8px;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 11px;
             text-align: center;
             color: var(--bordo);
         }
@@ -709,16 +715,19 @@
         }
 
         .faq-card {
-            background: var(--branco);
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            background: var(--branco-card);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
             border-left: 5px solid var(--bordo);
+            border-top: 1px solid rgba(92, 15, 25, 0.05);
+            border-right: 1px solid rgba(92, 15, 25, 0.05);
+            border-bottom: 1px solid rgba(92, 15, 25, 0.05);
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .faq-pergunta {
-            padding: 22px;
+            padding: 20px;
             font-size: 15px;
             font-weight: 700;
             color: var(--bordo);
@@ -739,15 +748,15 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out, padding 0.3s ease;
-            padding: 0 22px;
+            padding: 0 20px;
             font-size: 14px;
-            line-height: 1.7;
-            color: #555;
-            background: #FCFAF7;
+            line-height: 1.6;
+            color: var(--texto-suave);
+            background: #FAF8F5;
         }
 
         .faq-card.ativo .faq-resposta {
-            padding: 0 22px 22px 22px;
+            padding: 0 20px 20px 20px;
             max-height: 250px; 
         }
 
@@ -755,7 +764,42 @@
             transform: rotate(180deg);
         }
 
-        /* CONTATO CHIQUE */
+        /* SEO BOX LOCAL */
+        .seo-box {
+            background: var(--branco-card);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(92, 15, 25, 0.08);
+            border-top: 4px solid var(--dourado);
+        }
+
+        .seo-box i {
+            font-size: 36px;
+            color: var(--dourado);
+            margin-bottom: 12px;
+        }
+
+        .seo-box h2 {
+            color: var(--bordo);
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .seo-box p {
+            max-width: 800px;
+            margin: 10px auto;
+            line-height: 1.6;
+            font-size: 13px;
+            color: var(--texto-suave);
+        }
+
+        /* ==========================
+        CONTATOS DINÂMICOS E ESTILIZADOS
+        ========================== */
         .contato-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -771,101 +815,83 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 30px 20px;
-            border-radius: 20px;
-            background: var(--branco); 
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+            padding: 25px 15px;
+            border-radius: 16px;
+            background: var(--branco-card); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             transition: all 0.3s;
-            border: 1px solid rgba(0,0,0,0.03);
+            border: 1px solid rgba(92, 15, 25, 0.08);
         }
 
         .contato-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(92, 15, 25, 0.08);
-            border-color: rgba(92, 15, 25, 0.1);
+            box-shadow: 0 12px 25px rgba(92, 15, 25, 0.08);
+            border-color: var(--bordo);
         }
 
         .contato-card i {
-            font-size: 32px;
-            color: var(--bordo);
-            margin-bottom: 15px;
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        /* Cores de Identidade para os Contatos */
+        .contato-card.c-whatsapp i {
+            color: var(--verde-whatsapp);
+        }
+
+        .contato-card.c-instagram i {
+            background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contato-card.c-email i {
+            color: var(--vermelho-gmail);
+        }
+
+        .contato-card.c-regiao i {
+            color: var(--azul-maps);
         }
 
         .contato-card h3 {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--bordo); 
             margin-bottom: 6px;
             font-weight: 700;
         }
 
         .contato-card p {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--texto-suave);
             text-align: center;
         }
 
-        /* SEO BOX */
-        .seo-box {
-            background: var(--branco);
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 45px 35px;
-            border-radius: 24px;
-            text-align: center;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.02);
-            border-top: 4px solid var(--dourado);
-        }
-
-        .seo-box i {
-            font-size: 40px;
-            color: var(--dourado);
-            margin-bottom: 15px;
-        }
-
-        .seo-box h2 {
-            color: var(--bordo);
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-
-        .seo-box p {
-            max-width: 800px;
-            margin: 10px auto;
-            line-height: 1.7;
-            font-size: 14px;
-            color: var(--texto-suave);
-        }
-
-        /* RODAPÉ */
+        /* ==========================
+        RODAPÉ MINIMALISTA E DISCRETO
+        ========================== */
         footer {
             background: var(--bordo);
             color: white;
-            padding: 35px 20px;
+            padding: 20px 10px; /* Reduzido drasticamente */
             text-align: center;
             border-top: 3px solid var(--dourado);
         }
 
-        footer img {
-            height: 50px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-        }
-
         footer h3 {
             color: var(--dourado);
-            font-size: 17px;
+            font-size: 15px;
             margin-bottom: 2px;
         }
 
         .footer-slogan {
-            font-size: 12px;
-            margin-bottom: 15px;
+            font-size: 11px;
+            margin-bottom: 8px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
         .footer-copy {
-            font-size: 11px;
+            font-size: 10px;
             opacity: 0.6;
         }
 
@@ -928,18 +954,23 @@
         /* ==========================
         RESPONSIVIDADE AJUSTADA
         ========================== */
+        @media(max-width: 992px) {
+            .cards-servicos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media(max-width: 900px) {
             section {
                 padding: 60px 5%;
             }
 
-            .quem-container-secao {
-                padding: 10px 15px;
-            }
-
             .quem-box {
-                border-radius: 20px;
-                padding: 40px 25px;
+                border-radius: 15px;
+                padding: 30px 20px;
             }
 
             header {
@@ -959,15 +990,15 @@
             .hero {
                 margin: 90px 15px 30px 15px; 
                 border-radius: 20px;
-                padding: 60px 15px;
+                padding: 50px 15px;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 36px;
             }
 
             .hero-slogan {
-                font-size: 15px;
+                font-size: 14px;
                 letter-spacing: 3px;
             }
 
@@ -975,14 +1006,14 @@
                 font-size: 15px;
             }
 
-            .cards-servicos, .como-funciona-grid, .depoimentos-grid, .antes-depois-grid {
+            .como-funciona-grid, .depoimentos-grid, .antes-depois-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
 
             .quem-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 25px;
             }
 
             .destaque-container {
@@ -994,17 +1025,13 @@
                 gap: 25px;
             }
 
-            .portfolio {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .contato-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
             }
 
             .section-title {
-                font-size: 30px;
+                font-size: 34px;
             }
         }
 
@@ -1015,7 +1042,7 @@
             header {
                 justify-content: center; 
             }
-            .contato-grid {
+            .cards-servicos, .portfolio, .contato-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1049,86 +1076,88 @@
                 O conforto e a segurança que o seu lar merece.
             </div>
             <div class="hero-frase">
-                Sem estresse, sem surpresas e com hora marcada em Curitiba.
+                Sem estresse, sem surpresas e com hora marcada em Curitiba e Região Metropolitana.
             </div>
             <div class="hero-buttons">
-                <a href="https://wa.me/5541985381967" target="_blank" class="btn">
-                    <i class="fab fa-whatsapp"></i> Chame no WhatsApp
-                </a>
-                <a href="#locacao" class="btn btn-outline">
-                    <i class="fas fa-tools"></i> Alugar Equipamentos
+                <a href="https://wa.me/5541985381967?text=Olá! Gostaria de solicitar um orçamento para serviços residenciais." target="_blank" class="btn">
+                    <i class="fab fa-whatsapp"></i> Solicite um Orçamento
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 1. SERVIÇOS DE REPARO (DESIGN CLEAN) -->
-    <section id="servicos" class="bg-white">
-        <h2 class="section-title">Soluções para o Dia a Dia</h2>
-        <p class="section-subtitle">Resolvemos os seus problemas de manutenção residencial de forma rápida e segura. Te ajudamos na escolha técnica dos materiais certos!</p>
+    <!-- 1. SERVIÇOS DE REPARO (DESIGN ULTRA CONFORTÁVEL) -->
+    <section id="servicos" class="bg-confort">
+        <div class="title-wrapper">
+            <h2 class="section-title">Soluções para o Dia a Dia</h2>
+            <p class="section-subtitle">Resolvemos problemas de manutenção com o maior cuidado e respeito pelo seu lar. Conte com o nosso apoio técnico!</p>
+        </div>
         <div class="cards-servicos">
-            <div class="card-clean"><i class="fas fa-shower"></i><h3>Chuveiros</h3><p>Troca, instalação e reparos elétricos com fiação totalmente segura e protegida.</p></div>
-            <div class="card-clean"><i class="fas fa-faucet"></i><h3>Torneiras</h3><p>Troca de reparos, novos misturadores e eliminação definitiva de vazamentos.</p></div>
-            <div class="card-clean"><i class="fas fa-lightbulb"></i><h3>Iluminação</h3><p>Instalação cuidadosa de luminárias, pendentes decorativos e painéis de LED.</p></div>
-            <div class="card-clean"><i class="fas fa-plug"></i><h3>Tomadas & Interruptores</h3><p>Instalação de novas linhas, espelhos estéticos e troca de módulos desgastados.</p></div>
-            <div class="card-clean"><i class="fas fa-tv"></i><h3>Suporte para TV</h3><p>Fixação robusta e nivelada a laser, garantindo zero danos ou torturas na furação.</p></div>
-            <div class="card-clean"><i class="fas fa-window-maximize"></i><h3>Cortinas & Persianas</h3><p>Instalação precisa de trilhos, varões pesados e persianas de todos os tamanhos.</p></div>
-            <div class="card-clean"><i class="fas fa-layer-group"></i><h3>Prateleiras & Quadros</h3><p>Montagem simétrica e perfeitamente segura em qualquer superfície de parede.</p></div>
-            <div class="card-clean"><i class="fas fa-chair"></i><h3>Móveis Simples</h3><p>Montagem e ajustes rápidos de nichos, mesas e armários utilitários.</p></div>
-            <div class="card-clean"><i class="fas fa-screwdriver-wrench"></i><h3>Suporte nas Compras</h3><p>Sem o risco de comprar a peça errada: orientamos você antes de ir à loja.</p></div>
+            <div class="card-clean"><i class="fas fa-shower"></i><h3>Chuveiros</h3><p>Troca e conexões elétricas totalmente seguras.</p></div>
+            <div class="card-clean"><i class="fas fa-faucet"></i><h3>Torneiras</h3><p>Eliminação de vazamentos e novas torneiras.</p></div>
+            <div class="card-clean"><i class="fas fa-lightbulb"></i><h3>Iluminação</h3><p>Instalação cuidadosa de pendentes e painéis de LED.</p></div>
+            <div class="card-clean"><i class="fas fa-plug"></i><h3>Tomadas</h3><p>Instalação de novas tomadas e espelhos novos.</p></div>
+            <div class="card-clean"><i class="fas fa-tv"></i><h3>Suporte para TV</h3><p>Instalação nivelada a laser e furação limpa.</p></div>
+            <div class="card-clean"><i class="fas fa-window-maximize"></i><h3>Cortinas</h3><p>Fixação precisa de trilhos e varões pesados.</p></div>
+            <div class="card-clean"><i class="fas fa-layer-group"></i><h3>Prateleiras</h3><p>Montagem robusta e alinhada de prateleiras.</p></div>
+            <div class="card-clean"><i class="fas fa-chair"></i><h3>Móveis</h3><p>Montagem rápida de gaveteiros e móveis utilitários.</p></div>
         </div>
     </section>
 
-    <!-- 2. LOCAÇÃO DE EQUIPAMENTOS (FUNDO SUAVE) -->
-    <section id="locacao" class="bg-suave" style="border-top: 1px solid rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.02);">
-        <h2 class="section-title">Locação de Equipamentos</h2>
-        <p class="section-subtitle">Realize você mesmo a limpeza profunda dos seus estofados ou áreas externas e economize muito!</p>
+    <!-- 2. LOCAÇÃO DE EQUIPAMENTOS (FUNDO DESTAQUE) -->
+    <section id="locacao" class="bg-alternado">
+        <div class="title-wrapper">
+            <h2 class="section-title">Locação de Equipamentos</h2>
+            <p class="section-subtitle">Economize até 80% alugando equipamentos de alto padrão. Faça você mesmo e recupere o brilho da sua casa!</p>
+        </div>
         
-        <h3 class="locacao-secao-titulo">Equipamentos de Alta Performance</h3>
+        <h3 class="locacao-secao-titulo">Nossos Equipamentos</h3>
         <div class="locacao-individual-grid">
             
             <!-- EXTRATORA -->
             <div class="equipamento-card">
-                <span class="card-badge">Período: 24h</span>
+                <span class="card-badge">Período: 24h ou 12h</span>
                 <img src="extratora.jpeg" alt="Locação de Extratora Profissional" class="equipamento-foto">
                 <div class="equipamento-info">
                     <h4><i class="fas fa-soap"></i> Extratora de Estofados</h4>
-                    <p>Ideal para sofás, colchões, tapetes e bancos automotivos. Remove manchas acumuladas, ácaros e poeira profunda em minutos.</p>
-                    <div class="entrega-tag">
-                        <i class="fas fa-truck"></i> Entregamos e retiramos no seu endereço!
+                    <p>Ideal para higienização profunda de sofás, tapetes e colchões. Remove poeiras profundas e ácaros rapidamente.</p>
+                    <div class="entrega-tags-container">
+                        <div class="entrega-tag"><i class="fas fa-truck"></i> Entregamos e retiramos no seu endereço!</div>
+                        <div class="entrega-tag"><i class="fas fa-video"></i> Acompanha vídeo explicativo rápido de uso!</div>
                     </div>
-                    <a href="https://wa.me/5541985381967?text=Olá! Gostaria de alugar a extratora de estofados." target="_blank" class="btn">
-                        <i class="fab fa-whatsapp"></i> Alugar Extratora (24h)
+                    <a href="https://wa.me/5541985381967?text=Olá! Gostaria de consultar a locação da Extratora de Estofados." target="_blank" class="btn">
+                        <i class="fab fa-whatsapp"></i> Alugar Extratora
                     </a>
                 </div>
             </div>
 
             <!-- LAVADORA -->
             <div class="equipamento-card">
-                <span class="card-badge">Período: 24h</span>
+                <span class="card-badge">Período: 24h ou 12h</span>
                 <img src="lavadora.jpeg" alt="Lavadora de Alta Pressão" class="equipamento-foto">
                 <div class="equipamento-info">
                     <h4><i class="fas fa-tint"></i> Lavadora de Alta Pressão (Vap)</h4>
-                    <p>Força industrial para limpeza de calçadas, calhas, muros, telhados e áreas externas pós-obra com economia drástica de água.</p>
-                    <div class="entrega-tag">
-                        <i class="fas fa-video"></i> Acompanha vídeo explicativo rápido de uso!
+                    <p>Força pressurizada para limpezas profundas em calçadas, muros, frentes de casas e áreas externas no pós-obra.</p>
+                    <div class="entrega-tags-container">
+                        <div class="entrega-tag"><i class="fas fa-truck"></i> Entregamos e retiramos no seu endereço!</div>
+                        <div class="entrega-tag"><i class="fas fa-video"></i> Acompanha vídeo explicativo rápido de uso!</div>
                     </div>
-                    <a href="https://wa.me/5541985381967?text=Olá! Gostaria de alugar a lavadora de alta pressão." target="_blank" class="btn">
-                        <i class="fab fa-whatsapp"></i> Alugar Lavadora (24h)
+                    <a href="https://wa.me/5541985381967?text=Olá! Gostaria de consultar a locação da Lavadora de Alta Pressão." target="_blank" class="btn">
+                        <i class="fab fa-whatsapp"></i> Alugar Lavadora
                     </a>
                 </div>
             </div>
         </div>
 
-        <h3 class="locacao-secao-titulo">Adicione Kits de Produtos Concentrados</h3>
+        <h3 class="locacao-secao-titulo">Turbine seu Aluguel com Kits Concentrados</h3>
         <div class="kits-individual-grid">
             <div class="equipamento-card">
                 <img src="kit_extratora.jpeg" alt="Kit Limpeza Extratora" class="equipamento-foto">
                 <div class="equipamento-info">
                     <h4><i class="fas fa-magic"></i> Kit Estofados Completo</h4>
-                    <p>Shampoo flotador e eliminador de odores profissionais diluídos na medida exata para a higienização dos seus estofados.</p>
+                    <p>Shampoo flotador concentrado e bloqueador de odores na dosagem ideal.</p>
                     <a href="https://wa.me/5541985381967?text=Olá! Quero alugar a extratora com o Kit de Estofados." target="_blank" class="btn" style="width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Alugar com o Kit
+                        <i class="fab fa-whatsapp"></i> Alugar com Kit Estofados
                     </a>
                 </div>
             </div>
@@ -1137,9 +1166,9 @@
                 <img src="kit_carro.jpeg" alt="Kit Lavagem de Carro" class="equipamento-foto">
                 <div class="equipamento-info">
                     <h4><i class="fas fa-car"></i> Kit Estética Automotiva</h4>
-                    <p>Produtos especializados de alto rendimento para dar brilho e renovação técnica à pintura e ao interior do veículo.</p>
+                    <p>Shampoos de alta espumação e ceras líquidas para dar brilho ao interior e exterior.</p>
                     <a href="https://wa.me/5541985381967?text=Olá! Quero alugar a máquina com o Kit Automotivo." target="_blank" class="btn" style="width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Alugar com o Kit
+                        <i class="fab fa-whatsapp"></i> Alugar com Kit Auto
                     </a>
                 </div>
             </div>
@@ -1148,9 +1177,9 @@
                 <img src="kit_calcada.jpeg" alt="Kit Limpeza de Calçada" class="equipamento-foto">
                 <div class="equipamento-info">
                     <h4><i class="fas fa-road"></i> Kit Desincrustante Limo</h4>
-                    <p>Composição de alta performance formulada para dissolver mofos severos, limo e sujeiras encardidas de calçadas rústicas.</p>
-                    <a href="https://wa.me/5541985381967?text=Olá! Quero alugar a máquina com o Kit Desincrustante." target="_blank" class="btn" style="width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Alugar com o Kit
+                    <p>Solução ácida de altíssima eficiência para remoção de lodos verdes e mofos antigos.</p>
+                    <a href="https://wa.me/5541985381967?text=Olá! Quero alugar a lavadora com o Kit Desincrustante de Limo e Calçadas." target="_blank" class="btn" style="width: 100%;">
+                        <i class="fab fa-whatsapp"></i> Alugar com Kit Calçadas
                     </a>
                 </div>
             </div>
@@ -1158,14 +1187,16 @@
     </section>
 
     <!-- 3. ANTES E DEPOIS (RESULTADOS VISUAIS) -->
-    <section id="antes-depois" class="bg-white">
-        <h2 class="section-title">O Padrão de Qualidade B&B</h2>
-        <p class="section-subtitle">Trabalho técnico, alinhado, limpo e com alta durabilidade. Sinta a diferença do capricho residencial.</p>
+    <section id="antes-depois" class="bg-confort">
+        <div class="title-wrapper">
+            <h2 class="section-title">O Padrão de Qualidade B&B</h2>
+            <p class="section-subtitle">Alugue equipamentos para você mesmo limpar, ou contrate os nossos serviços de instalações organizadas.</p>
+        </div>
         
         <div class="antes-depois-grid">
             <!-- CASO 1: HIGIENIZAÇÃO -->
             <div class="antes-depois-card">
-                <div class="antes-depois-titulo">Higienização Profunda (Extratora)</div>
+                <div class="antes-depois-titulo">Higienize Você Mesmo (Locação de Extratora)</div>
                 <div class="antes-depois-container">
                     <div class="lado">
                         <img src="sofa_antes.jpeg" alt="Sofá Sujo Antes">
@@ -1180,7 +1211,7 @@
 
             <!-- CASO 2: INSTALAÇÃO -->
             <div class="antes-depois-card">
-                <div class="antes-depois-titulo">Instalação e Organização Técnica</div>
+                <div class="antes-depois-titulo">Instalações Organizadas de Tomadas/Fios</div>
                 <div class="antes-depois-container">
                     <div class="lado">
                         <img src="fiarada_antes.jpeg" alt="Instalação Bagunçada">
@@ -1196,69 +1227,70 @@
     </section>
 
     <!-- 4. COMO FUNCIONA (PASSO A PASSO) -->
-    <section id="como-funciona" class="bg-suave">
-        <h2 class="section-title">Como Funciona?</h2>
-        <p class="section-subtitle">Sem complicação ou surpresas no orçamento final. Processo simples do início ao fim.</p>
+    <section id="como-funciona" class="bg-alternado">
+        <div class="title-wrapper">
+            <h2 class="section-title">Como Funciona?</h2>
+            <p class="section-subtitle">Sem enrolação, burocracia ou taxas escondidas. Planejamento limpo do início ao fim.</p>
+        </div>
         <div class="como-funciona-grid">
             <div class="como-card">
                 <div class="como-numero">1</div>
                 <i class="fab fa-whatsapp"></i>
                 <h3>Fale no WhatsApp</h3>
-                <p>Envie fotos ou uma breve descrição do reparo necessário ou indique a máquina que deseja locar.</p>
+                <p>Envie fotos rápidas ou áudios explicando a sua instalação ou solicitando a data para alugar as máquinas.</p>
             </div>
             <div class="como-card">
                 <div class="como-numero">2</div>
                 <i class="fas fa-check-double"></i>
-                <h3>Feche o Orçamento</h3>
-                <p>Nós fornecemos uma estimativa de valores totalmente sem custos, transparente e com valor fixo combinado.</p>
+                <h3>Combine Valores</h3>
+                <p>Nós passamos um orçamento fixo e direto. Você sabe o preço exato que pagará antes de agendarmos.</p>
             </div>
             <div class="como-card">
                 <div class="como-numero">3</div>
                 <i class="fas fa-house-laptop"></i>
-                <h3>Agende seu Horário</h3>
-                <p>Marcamos dia e horário exato da nossa ida ou da entrega da sua lavadora/extratora residencial.</p>
+                <h3>Agende a Data</h3>
+                <p>Combinamos o dia e o horário exato da entrega do aparelho ou da execução dos reparos residenciais.</p>
             </div>
         </div>
     </section>
 
-    <!-- 5. QUEM SOMOS (FUNDO BORDO IMPACTANTE) -->
-    <div class="quem-container-secao" id="quem">
-        <div class="quem-box">
+    <!-- 5. QUEM SOMOS (TÍTULO FORA, CAIXA COMPACTA) -->
+    <section id="quem" class="bg-confort">
+        <div class="title-wrapper">
             <h2 class="section-title">Quem Somos</h2>
-            <p class="section-subtitle">
-                A B&B Soluções nasceu para provar que cuidado, precisão técnica e segurança andam sempre juntos.
-            </p>
+            <p class="section-subtitle">Conheça um pouco mais sobre a nossa essência e dedicação diária à qualidade.</p>
+        </div>
 
+        <div class="quem-box">
             <div class="quem-grid">
                 <div class="quem-img-container">
                     <img src="fotobb.jpeg" alt="Equipe B&B Soluções">
                 </div>
                 <div class="quem-content">
                     <p>
-                        Crescemos rodeadas por ferramentas, projetos de manutenção e reformas em casa. Aprendemos desde cedo que resolver problemas domésticos exige capricho, paciência e o uso da técnica correta.
+                        A B&B Soluções foi planejada para preencher uma lacuna importante no mercado de Curitiba e RM: oferecer serviços residenciais de excelência com a confiança de saber exatamente quem entra na sua casa.
                     </p>
                     <p>
-                        A B&B Soluções foi planejada para preencher uma lacuna importante no mercado de Curitiba: oferecer serviços residenciais de excelência com a confiança de saber exatamente quem está entrando na sua casa. 
-                    </p>
-                    <p>
-                        Seja para fixar um simples painel ou alugar uma extratora profissional para sua faxina de fim de semana, nossa missão é entregar comodidade e tranquilidade com foco na experiência do cliente.
+                        Seja para fixar um simples painel ou alugar uma extratora profissional para sua faxina de fim de semana, nossa missão é entregar comodidade e tranquilidade com foco total no respeito ao cliente.
                     </p>
                     
                     <div class="destaque-container">
                         <div class="destaque"><i class="fas fa-heart"></i> Fundada por mulheres</div>
-                        <div class="destaque"><i class="fas fa-shield-alt"></i> Segurança total para sua família</div>
-                        <div class="destaque"><i class="fas fa-clock"></i> Pontualidade e hora marcada</div>
-                        <div class="destaque"><i class="fas fa-broom"></i> Entrega sem poeira ou sujeira</div>
+                        <div class="destaque"><i class="fas fa-shield-alt"></i> Segurança para sua família</div>
+                        <div class="destaque"><i class="fas fa-clock"></i> Pontualidade rígida</div>
+                        <div class="destaque"><i class="fas fa-broom"></i> Sem poeira ou bagunça</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- 6. DEPOIMENTOS (PROVA SOCIAL IMPACTANTE) -->
-    <section id="depoimentos" class="bg-white">
-        <h2 class="section-title">O que dizem os nossos clientes</h2>
-        <p class="section-subtitle">Garantia de satisfação relatada por quem já contratou e aprovou nossos atendimentos em Curitiba.</p>
+    <!-- 6. DEPOIMENTOS (PROVA SOCIAL) -->
+    <section id="depoimentos" class="bg-alternado">
+        <div class="title-wrapper">
+            <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+            <p class="section-subtitle">Sua segurança é nossa prioridade absoluta. Veja a opinião de quem contratou em Curitiba e Região.</p>
+        </div>
         
         <div class="depoimentos-grid">
             <div class="depoimento-card">
@@ -1266,13 +1298,13 @@
                     <div class="estrelas">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="depoimento-texto">"Contratei para consertar o suporte da TV e instalar um varão de cortina. Pontualidade impecável, fizeram tudo a laser, sem sujeira, e com um cuidado que eu nunca tinha visto antes. Extremamente seguras e profissionais!"</p>
+                    <p class="depoimento-texto">"Instalaram um suporte articulado pesado e varões de cortina. Pontualidade britânica, alinhamento técnico perfeito a laser e sem nenhuma poeira no piso. Fantásticas!"</p>
                 </div>
                 <div class="autor-info">
                     <div class="autor-avatar">MS</div>
                     <div class="autor-nome">
                         <h5>Mariana S.</h5>
-                        <p>Bairro Cabral • Cliente de Reparos</p>
+                        <p>Bairro Cabral • Reparos</p>
                     </div>
                 </div>
             </div>
@@ -1282,13 +1314,13 @@
                     <div class="estrelas">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="depoimento-texto">"Aluguei a extratora por 24 horas para limpar o meu sofá e o meu colchão. A máquina veio higienizada, os produtos do kit deles são perfeitos e o vídeo explicativo facilitou demais. Ficou novo de novo e economizei bastante!"</p>
+                    <p class="depoimento-texto">"Aluguei a máquina extratora por 24 horas para limpar o colchão e poltronas. Veio super limpa, explicam tudo em vídeo de forma simples. Excelente opção de economia!"</p>
                 </div>
                 <div class="autor-info">
                     <div class="autor-avatar">RC</div>
                     <div class="autor-nome">
                         <h5>Rodrigo C.</h5>
-                        <p>Bairro Batel • Locação de Extratora</p>
+                        <p>Bairro Batel • Locação</p>
                     </div>
                 </div>
             </div>
@@ -1298,13 +1330,13 @@
                     <div class="estrelas">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="depoimento-texto">"Por ser mulher e morar sozinha, sempre tive receio de colocar prestadores de serviço dentro do meu apartamento. O atendimento da B&B foi excelente e me passou uma tranquilidade e segurança imensurável. Já agendei a próxima instalação."</p>
+                    <p class="depoimento-texto">"Como moro sozinha, me sinto imensamente tranquila em chamar prestadores que respeitam a minha segurança e espaço doméstico. Indico de olhos fechados!"</p>
                 </div>
                 <div class="autor-info">
                     <div class="autor-avatar">AL</div>
                     <div class="autor-nome">
                         <h5>Amanda L.</h5>
-                        <p>Bairro Água Verde • Cliente de Reparos</p>
+                        <p>Bairro Água Verde • Reparos</p>
                     </div>
                 </div>
             </div>
@@ -1312,27 +1344,31 @@
     </section>
 
     <!-- 7. PORTFÓLIO (RESULTADOS EM MINIATURA) -->
-    <section id="portfolio" class="bg-suave">
-        <h2 class="section-title">Portfólio de Instalações</h2>
-        <p class="section-subtitle">Confira fotos reais das nossas montagens e acabamentos de projetos concluídos.</p>
+    <section id="portfolio" class="bg-confort">
+        <div class="title-wrapper">
+            <h2 class="section-title">Portfólio de Atendimentos</h2>
+            <p class="section-subtitle">Confira fotos reais das nossas montagens de suportes, tomadas e reparos diversos concluídos com carinho.</p>
+        </div>
         <div class="portfolio">
             <div class="portfolio-item"><img src="servico1.jpeg" alt="Instalação"><p>Instalação Geral</p></div>
-            <div class="portfolio-item"><img src="servico2.jpeg" alt="Montagem"><p>Montagem e Ajustes</p></div>
+            <div class="portfolio-item"><img src="servico2.jpeg" alt="Montagem"><p>Ajustes em Portas</p></div>
             <div class="portfolio-item"><img src="servico3.jpeg" alt="Reparo"><p>Reparos Elétricos</p></div>
-            <div class="portfolio-item"><img src="servico4.jpeg" alt="Acessórios"><p>Instalação de Banheiro</p></div>
-            <div class="portfolio-item"><img src="servico5.jpeg" alt="Manutenção"><p>Suporte e Prateleiras</p></div>
-            <div class="portfolio-item"><img src="servico6.jpeg" alt="Pequenos Reparos"><p>Quadros e Molduras</p></div>
-            <div class="portfolio-item"><img src="servico7.jpeg" alt="Fixação"><p>Fixação de Trilhos</p></div>
-            <div class="portfolio-item"><img src="servico8.jpeg" alt="Instalação"><p>Instalação de Plafons</p></div>
-            <div class="portfolio-item"><img src="servico9.jpeg" alt="Melhorias"><p>Ajustes em Tomadas</p></div>
-            <div class="portfolio-item"><img src="servico10.jpeg" alt="Finalizado"><p>Suportes Articulados</p></div>
+            <div class="portfolio-item"><img src="servico4.jpeg" alt="Acessórios"><p>Fixação de Acessórios</p></div>
+            <div class="portfolio-item"><img src="servico5.jpeg" alt="Manutenção"><p>Instalações Modernas</p></div>
+            <div class="portfolio-item"><img src="servico6.jpeg" alt="Pequenos Reparos"><p>Prateleiras e Quadros</p></div>
+            <div class="portfolio-item"><img src="servico7.jpeg" alt="Fixação"><p>Cortinas e Trilhos</p></div>
+            <div class="portfolio-item"><img src="servico8.jpeg" alt="Instalação"><p>Iluminação Decorativa</p></div>
+            <div class="portfolio-item"><img src="servico9.jpeg" alt="Melhorias"><p>Ajustes de Tomadas</p></div>
+            <div class="portfolio-item"><img src="servico10.jpeg" alt="Finalizado"><p>Suporte de TV</p></div>
         </div>
     </section>
 
     <!-- 8. PERGUNTAS FREQUENTES (FAQ SEGURO) -->
-    <section id="faq" class="bg-white">
-        <h2 class="section-title">Perguntas Frequentes</h2>
-        <p class="section-subtitle">Suas dúvidas sobre contratações e aluguéis respondidas de forma direta.</p>
+    <section id="faq" class="bg-alternado">
+        <div class="title-wrapper">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <p class="section-subtitle">Esclareça rapidamente seus questionamentos sobre orçamentos virtuais e condições de aluguel.</p>
+        </div>
         <div class="faq-grid">
             <div class="faq-card">
                 <div class="faq-pergunta">
@@ -1340,7 +1376,7 @@
                     <i class="fas fa-chevron-down seta"></i>
                 </div>
                 <div class="faq-resposta">
-                    Não! O orçamento feito de maneira digital no WhatsApp é totalmente gratuito e ágil. Enviando fotos ou um vídeo explicativo da sua necessidade, conseguimos calcular os valores para você em minutos.
+                    Não! O orçamento via WhatsApp é totalmente gratuito. Enviando fotos ou um pequeno vídeo da sua necessidade, calculamos os valores exatos para você de forma rápida.
                 </div>
             </div>
             <div class="faq-card">
@@ -1349,16 +1385,16 @@
                     <i class="fas fa-chevron-down seta"></i>
                 </div>
                 <div class="faq-resposta">
-                    Nós calculamos o valor do frete com base no seu bairro de residência em Curitiba ou RM. Combinamos o melhor horário, entregamos na sua porta com explicações rápidas e buscamos no dia seguinte.
+                    Nós calculamos o valor do frete conforme o seu bairro em Curitiba ou Região Metropolitana. Entregamos a máquina higienizada na sua porta com o suporte técnico e buscamos no prazo combinado.
                 </div>
             </div>
             <div class="faq-card">
                 <div class="faq-pergunta">
-                    Qual a garantia que tenho sobre as instalações efetuadas?
+                    Vocês realizam serviços de faxina ou limpeza residencial?
                     <i class="fas fa-chevron-down seta"></i>
                 </div>
                 <div class="faq-resposta">
-                    Todas as nossas instalações residenciais contam com garantia integral. Se qualquer fixação, reparo elétrico ou hidráulico apresentar irregularidades, faremos o retorno imediato e sem custos para reparo.
+                    Não fazemos serviços de limpeza doméstica. Nós focamos em pequenos reparos, instalações residenciais e oferecemos o serviço exclusivo de locação de maquinários profissionais para que você mesmo execute a sua higienização com enorme economia.
                 </div>
             </div>
             <div class="faq-card">
@@ -1367,60 +1403,61 @@
                     <i class="fas fa-chevron-down seta"></i>
                 </div>
                 <div class="faq-resposta">
-                    Trabalhamos com Pix direto, cartões de débito e crédito parcelado. O pagamento do seu atendimento ou locação é executado com segurança somente após o encerramento da montagem ou na entrega efetiva da máquina.
+                    Trabalhamos com Pix direto, cartões de débito e crédito parcelado. O pagamento do seu atendimento ou locação é executado com total segurança somente após a conclusão dos reparos ou no momento da entrega das máquinas.
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SEO LOCAL -->
-    <section class="bg-suave">
+    <section class="bg-confort">
         <div class="seo-box">
             <i class="fas fa-house-circle-check"></i>
-            <h2>Procurando "Faz-Tudo" ou "Marido de Aluguel" em Curitiba?</h2>
+            <h2>Procurando "Faz-Tudo" ou "Marido de Aluguel" em Curitiba e Região Metropolitana?</h2>
             <p>
-                A B&B Soluções revoluciona o mercado de manutenção residencial com atendimento qualificado executado por mulheres treinadas, garantindo precisão, discrição e segurança absoluta para sua família.
+                A B&B Soluções atende Curitiba e Região Metropolitana oferecendo pequenos reparos profissionais executados com máxima delicadeza técnica por mulheres capacitadas, garantindo segurança total.
             </p>
             <p>
-                Atendemos de forma rápida os bairros de Curitiba com garantia de serviço e suporte integral para locação de extratoras de estofados e lavadoras de alta pressão residenciais.
+                Além de serviços de furação e montagem, fornecemos suporte completo para locações de extratoras de estofados e lavadoras com entrega e busca efetuadas diretamente no seu endereço residencial.
             </p>
         </div>
     </section>
 
-    <!-- 9. CONTATO COM RESPOSTA RÁPIDA -->
-    <section id="contato" class="bg-white">
-        <h2 class="section-title">Solicite seu Orçamento Sem Compromisso</h2>
-        <p class="section-subtitle">Escolha seu canal de preferência. Retornamos mensagens no WhatsApp em até 15 minutos!</p>
+    <!-- 9. CONTATO COM IDENTIDADE VISUAL EXCLUSIVA -->
+    <section id="contato" class="bg-alternado">
+        <div class="title-wrapper">
+            <h2 class="section-title">Solicite seu Orçamento Rápido</h2>
+            <p class="section-subtitle">Escolha seu canal preferido para atendimento. Respondemos em até 15 minutos no WhatsApp!</p>
+        </div>
         <div class="contato-grid">
-            <a class="contato-card" href="https://wa.me/5541985381967?text=Olá! Preciso de um orçamento rápido para serviços." target="_blank">
-                <i class="fab fa-whatsapp" style="color: var(--verde-whatsapp);"></i>
+            <a class="contato-card c-whatsapp" href="https://wa.me/5541985381967?text=Olá! Preciso de um orçamento rápido para serviços." target="_blank">
+                <i class="fab fa-whatsapp"></i>
                 <h3>WhatsApp</h3>
-                <p>Retorno em até 15min</p>
+                <p>Retorno em 15 minutos</p>
             </a>
-            <a class="contato-card" href="https://www.instagram.com/bbsolucoes.cwb" target="_blank">
-                <i class="fab fa-instagram" style="color: #E1306C;"></i>
+            <a class="contato-card c-instagram" href="https://www.instagram.com/bbsolucoes.cwb" target="_blank">
+                <i class="fab fa-instagram"></i>
                 <h3>Instagram</h3>
                 <p>@bbsolucoes.cwb</p>
             </a>
-            <a class="contato-card" href="mailto:bbsolucoes1@gmail.com">
+            <a class="contato-card c-email" href="mailto:bbsolucoes1@gmail.com">
                 <i class="fas fa-envelope"></i>
                 <h3>E-mail</h3>
                 <p>bbsolucoes1@gmail.com</p>
             </a>
-            <div class="contato-card">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Regiões</h3>
-                <p>Curitiba e Região</p>
+            <div class="contato-card c-regiao">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Atendimento</h3>
+                <p>Curitiba e Região Metropolitana</p>
             </div>
         </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <!-- RODAPÉ MINIMALISTA -->
     <footer>
-        <img src="logobb.jpeg" alt="B&B Soluções Logo">
         <h3>B&B Soluções</h3>
         <p class="footer-slogan">Elas Resolvem</p>
-        <p class="footer-copy">© 2026 B&B Soluções • Todos os direitos reservados</p>
+        <p class="footer-copy">© 2026 B&B Soluções • Curitiba e Região Metropolitana • Todos os direitos reservados</p>
     </footer>
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
