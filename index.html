@@ -55,14 +55,13 @@
             line-height: 1.6;
         }
 
-        /* AJUSTE GLOBAL DE ESPAÇAMENTO DAS SEÇÕES (MAIS PRÓXIMAS) */
         section {
-            padding: 60px 8%; 
+            padding: 50px 8%; /* Espaçamento entre seções sutilmente reduzido */
         }
 
         .section-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 42px; 
+            font-size: 40px; 
             text-align: center;
             color: var(--bordo);
             margin-bottom: 10px;
@@ -71,7 +70,7 @@
 
         .section-subtitle {
             max-width: 750px;
-            margin: 0 auto 40px; 
+            margin: 0 auto 35px; 
             text-align: center;
             font-size: 16px;
             line-height: 1.6;
@@ -79,7 +78,7 @@
         }
 
         /* ==========================
-        PARTE 1: CABEÇALHO (HEADER)
+        HEADER AJUSTADO (LOGO NÍTIDA)
         ========================== */
         header {
             position: fixed;
@@ -88,12 +87,12 @@
             width: 100%;
             z-index: 9999;
             background: var(--bordo); 
-            padding: 10px 7%; 
+            padding: 5px 7%; 
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-            height: 70px; 
+            height: 75px; 
         }
 
         .logo-container {
@@ -103,11 +102,12 @@
         }
 
         .logo img {
-            height: 55px; 
+            height: 60px; /* Mantém um tamanho excelente */
             width: auto;
             display: block;
-            mix-blend-mode: multiply; /* Mistura o fundo da logo com a barra do topo */
-            filter: brightness(1.1) contrast(1.1); 
+            border-radius: 8px; /* Cantos levemente arredondados para acabamento */
+            /* Removido o multiply que apagava a logo */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra leve para destacar */
             transition: transform 0.3s ease;
         }
 
@@ -129,13 +129,21 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-      /* ==========================
-        PARTE 2: BANNER PRINCIPAL (HERO)
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--dourado);
+        }
+
+        /* ==========================
+        BANNER PRINCIPAL FLUTUANTE (HERO)
         ========================== */
         .hero {
-            margin: 70px 0 0 0; 
+            /* Desgruda do topo (95px de espaço) e adiciona margens nas laterais */
+            margin: 105px 40px 30px 40px; 
+            border-radius: 24px; /* Bordas arredondadas elegantes nas laterais */
             position: relative;
-            min-height: 60vh; /* Altura reduzida e ideal */
+            min-height: 55vh; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -144,6 +152,8 @@
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('bannerbb.jpeg');
             background-size: cover;
             background-position: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
         }
 
         .hero-content {
@@ -167,7 +177,7 @@
 
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 64px; 
+            font-size: 60px; 
             line-height: 1.1;
             font-weight: 700;
             color: white;
@@ -206,6 +216,7 @@
             flex-wrap: wrap;
         }
 
+        /* AJUSTE DO BOTÃO (ALINHAMENTO DO ÍCONE E TEXTO) */
         .btn {
             padding: 12px 28px; 
             border-radius: 50px; 
@@ -213,11 +224,19 @@
             font-size: 14px;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: inline-flex; /* Define flexbox */
+            align-items: center; /* Alinha verticalmente no centro */
+            justify-content: center; /* Alinha horizontalmente no centro */
+            gap: 10px; /* Espaço perfeito entre ícone e texto */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn i {
+            font-size: 16px;
+            display: inline-block;
+            line-height: 1;
         }
 
         .btn-primary {
@@ -243,36 +262,49 @@
             color: var(--bordo);
             transform: translateY(-3px);
         }
-      /* ==========================
-        PARTE 3: QUEM SOMOS, SERVIÇOS, PORTFÓLIO E FAQS
+
+        /* ==========================
+        QUEM SOMOS & FOTO PROPORCIONAL
         ========================== */
         .quem-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr; 
             gap: 40px;
-            align-items: center;
+            align-items: stretch; /* Alinha os dois lados para terem a mesma altura */
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .quem-img-container {
             width: 100%;
-            max-height: 450px; /* Impede a imagem de ficar gigante */
+            height: 100%; /* Acompanha dinamicamente a altura do texto */
+            min-height: 380px;
+            max-height: 480px; 
             overflow: hidden;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            background: #fff; /* Fundo branco caso a proporção mude */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .quem-grid img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Recorta a imagem proporcionalmente */
+            object-fit: contain; /* Mostra a foto inteira de vocês, sem cortes indesejados! */
             display: block;
             transition: transform 0.5s ease;
         }
 
         .quem-grid img:hover {
-            transform: scale(1.03);
+            transform: scale(1.02);
+        }
+
+        .quem-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza o texto verticalmente com a imagem */
         }
 
         .quem-content p {
@@ -301,6 +333,7 @@
             gap: 8px;
         }
 
+        /* GRIDS GERAIS */
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -358,11 +391,6 @@
             transition: all 0.3s ease;
         }
 
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-
         .portfolio-item img {
             width: 100%;
             height: 200px; 
@@ -391,11 +419,6 @@
             padding: 22px;
             border-radius: 16px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-card:hover {
-            transform: translateY(-3px);
         }
 
         .faq-card h3 {
@@ -445,7 +468,7 @@
         }
 
         /* ==========================
-        CONTATOS E RODAPÉ CSS
+        CONTATOS, RODAPÉ MINIMIZADO & FLUTUANTE
         ========================== */
         .contato-grid {
             display: grid;
@@ -465,7 +488,7 @@
             padding: 20px;
             border-radius: 16px;
             background: white;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            box-shadow: 0 6px 18 rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
 
@@ -492,37 +515,37 @@
             text-align: center;
         }
 
+        /* RODAPÉ COMPACTADO MÁXIMO */
         footer {
             background: var(--bordo);
             color: white;
-            padding: 25px 20px; /* Super compacto */
+            padding: 15px 20px; /* Reduzido de 25px para apenas 15px */
             text-align: center;
             border-top: 3px solid var(--dourado);
         }
 
         footer img {
-            height: 45px; /* Altura reduzida */
-            margin-bottom: 8px;
-            mix-blend-mode: multiply;
-            filter: brightness(1.15) contrast(1.1);
+            height: 38px; /* Reduzido para ficar discreto e baixo */
+            margin-bottom: 5px;
+            border-radius: 4px;
         }
 
         footer h3 {
             color: var(--dourado);
-            font-size: 16px;
-            margin-bottom: 4px;
+            font-size: 14px;
+            margin-bottom: 2px;
         }
 
         .footer-slogan {
-            font-size: 12px;
-            margin-bottom: 10px;
+            font-size: 11px;
+            margin-bottom: 6px;
             opacity: 0.9;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
         .footer-copy {
-            font-size: 11px;
+            font-size: 10px;
             opacity: 0.7;
         }
 
@@ -580,12 +603,10 @@
             border: 2px solid white;
         }
 
-        /* ==========================
-        RESPONSIVIDADE AJUSTADA
-        ========================== */
+        /* RESPONSIVIDADE ADAPTADA */
         @media(max-width: 900px) {
             section {
-                padding: 40px 5%;
+                padding: 35px 5%;
             }
 
             header {
@@ -609,17 +630,19 @@
             }
 
             .hero {
-                margin-top: 65px;
+                /* No mobile, removemos as margens gigantes para aproveitar a tela */
+                margin: 80px 15px 20px 15px; 
+                border-radius: 16px;
                 min-height: auto;
-                padding: 40px 15px;
+                padding: 35px 15px;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
 
             .hero-slogan {
-                font-size: 16px;
+                font-size: 15px;
                 letter-spacing: 2px;
             }
 
@@ -633,7 +656,8 @@
             }
 
             .quem-img-container {
-                max-height: 300px;
+                min-height: 250px;
+                max-height: 350px;
             }
 
             .destaque-container {
@@ -660,7 +684,7 @@
             }
 
             .section-title {
-                font-size: 30px;
+                font-size: 28px;
             }
         }
 
@@ -680,6 +704,7 @@
 
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
         <div class="logo-container">
             <div class="logo">
@@ -694,6 +719,7 @@
         </nav>
     </header>
 
+    <!-- BANNER PRINCIPAL FLUTUANTE -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-tag">
@@ -719,6 +745,7 @@
         </div>
     </section>
 
+    <!-- QUEM SOMOS (FOTO COMPLETA) -->
     <section id="quem">
         <h2 class="section-title">Quem Somos</h2>
         <p class="section-subtitle">
@@ -749,6 +776,7 @@
         </div>
     </section>
 
+    <!-- COMPROMISSO DE QUALIDADE -->
     <section style="background: white;">
         <h2 class="section-title">Compromisso com Qualidade</h2>
         <p class="section-subtitle">Garantindo a melhor experiência de atendimento em Curitiba</p>
@@ -771,6 +799,7 @@
         </div>
     </section>
 
+    <!-- SERVIÇOS -->
     <section id="servicos">
         <h2 class="section-title">Soluções para o Dia a Dia</h2>
         <p class="section-subtitle">Realizamos diversos pequenos reparos, instalações e manutenções residenciais com máxima precisão.</p>
@@ -787,7 +816,7 @@
         </div>
     </section>
 
-  <section id="portfolio" style="background: white;">
+        <section id="portfolio" style="background: white;">
         <h2 class="section-title">Portfólio</h2>
         <p class="section-subtitle">Veja alguns dos serviços e finalizações caprichadas executadas pela nossa equipe.</p>
         <div class="portfolio">
@@ -804,6 +833,7 @@
         </div>
     </section>
 
+    <!-- COMO FUNCIONA -->
     <section>
         <h2 class="section-title">Como Funciona</h2>
         <p class="section-subtitle">Entenda o nosso processo de atendimento ágil, transparente e seguro para a sua casa.</p>
@@ -817,6 +847,7 @@
         </div>
     </section>
 
+    <!-- PERGUNTAS FREQUENTES -->
     <section id="faq" style="background: #f4efe8;">
         <h2 class="section-title">Perguntas Frequentes</h2>
         <p class="section-subtitle">Tire suas principais dúvidas sobre o nosso modelo de atendimento.</p>
@@ -840,6 +871,7 @@
         </div>
     </section>
 
+    <!-- SEO BOX -->
     <section>
         <div class="seo-box">
             <i class="fas fa-house-circle-check"></i>
@@ -850,12 +882,14 @@
             <p>
                 A B&B Soluções traz uma proposta diferenciada: pequenos reparos, furos, fixações e manutenções com atendimento exclusivo feito por mulheres, agregando conforto, respeito máximo e segurança para seu lar.
             </p>
-            <a href="https://wa.me/5541985381967" target="_blank" class="btn btn-primary" style="margin-top: 15px;">
+            <!-- BOTÃO REAJUSTADO: ALINHAMENTO PERFEITO DO WHATSAPP -->
+            <a href="https://wa.me/5541985381967" target="_blank" class="btn btn-primary" style="margin-top: 20px;">
                 <i class="fab fa-whatsapp"></i> Solicitar Orçamento Grátis
             </a>
         </div>
     </section>
 
+    <!-- CONTATO -->
     <section id="contato" style="background: white;">
         <h2 class="section-title">Solicite um Orçamento</h2>
         <p class="section-subtitle">Escolha o canal que preferir. Estamos prontas para te atender!</p>
@@ -883,6 +917,7 @@
         </div>
     </section>
 
+    <!-- RODAPÉ ULTRA COMPACTO -->
     <footer>
         <img src="logobb.jpeg" alt="B&B Soluções Logo">
         <h3>B&B Soluções</h3>
@@ -890,14 +925,17 @@
         <p class="footer-copy">© 2026 B&B Soluções • Todos os direitos reservados</p>
     </footer>
 
+    <!-- BOTÃO FIXO DE WHATSAPP -->
     <a class="whatsapp-float" href="https://wa.me/5541985381967" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- LIGHTBOX PARA FOTOS -->
     <div id="lightbox" class="lightbox">
         <img id="lightbox-img" alt="Visualização expandida">
     </div>
 
+    <!-- SCRIPTS -->
     <script>
         const imagens = document.querySelectorAll('.portfolio-item img');
         const lightbox = document.getElementById('lightbox');
@@ -916,8 +954,3 @@
     </script>
 </body>
 </html>
-
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: var(--dourado);
-        }
