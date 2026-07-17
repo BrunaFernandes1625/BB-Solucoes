@@ -23,7 +23,7 @@
 
     <style>
         /* ==========================
-        PALETA DE CORES CONFORTÁVEL (ESTILO NOVO)
+        PALETA DE CORES E CONFIGURAÇÕES
         ========================== */
         :root {
             --bordo: #5C0F19;           
@@ -39,9 +39,6 @@
             --vermelho-gmail: #EA4335;
         }
 
-        /* ==========================
-        RESET & CONFIGURAÇÕES GERAIS
-        ========================== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -64,14 +61,10 @@
             padding: 80px 8%; 
         }
 
-        .bg-confort {
-            background-color: var(--claro-fundo);
-        }
+        .bg-confort { background-color: var(--claro-fundo); }
+        .bg-alternado { background-color: var(--claro-alternado); }
 
-        .bg-alternado {
-            background-color: var(--claro-alternado);
-        }
-
+        /* TÍTULOS PADRONIZADOS (ESTRUTURA NOVA) */
         .title-wrapper {
             text-align: center;
             margin-bottom: 50px;
@@ -108,7 +101,7 @@
         }
 
         /* ==========================
-        HEADER MINIMALISTA
+        HEADER (ESTRUTURA NOVA)
         ========================== */
         header {
             position: fixed;
@@ -131,14 +124,9 @@
             transition: transform 0.3s;
         }
 
-        .logo img:hover {
-            transform: scale(1.05);
-        }
+        .logo img:hover { transform: scale(1.05); }
 
-        nav {
-            display: flex;
-            gap: 10px;
-        }
+        nav { display: flex; gap: 10px; }
 
         nav a {
             color: white;
@@ -156,7 +144,7 @@
         }
 
         /* ==========================
-        BANNER PRINCIPAL (ESTILO NOVO FLUTUANTE + IMAGEM ANTIGA)
+        BANNER PRINCIPAL (ESTILO ANTIGO QUE VOCÊ GOSTAVA)
         ========================== */
         .hero {
             margin: 110px 40px 40px 40px; 
@@ -168,17 +156,13 @@
             align-items: center;
             text-align: center;
             padding: 60px 20px;
-            /* Junção: Formato moderno "card" com a imagem de fundo original */
             background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('bannerbb.jpeg');
             background-size: cover;
             background-position: center;
             box-shadow: 0 12px 35px rgba(92, 15, 25, 0.15);
         }
 
-        .hero-content {
-            max-width: 800px;
-        }
-
+        .hero-content { max-width: 800px; }
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 58px; 
@@ -240,7 +224,7 @@
         }
 
         /* ==========================
-        SERVIÇOS DE REPARO (GRID DE 4 COLUNAS - NOVO)
+        SERVIÇOS DE REPARO (ESTRUTURA LIMPA)
         ========================== */
         .cards-servicos {
             display: grid;
@@ -279,26 +263,12 @@
             transition: all 0.3s;
         }
 
-        .card-clean:hover i {
-            background: var(--bordo);
-            color: white;
-        }
-
-        .card-clean h3 {
-            color: var(--bordo);
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .card-clean p {
-            font-size: 13px;
-            color: var(--texto-suave);
-            line-height: 1.5;
-        }
+        .card-clean:hover i { background: var(--bordo); color: white; }
+        .card-clean h3 { color: var(--bordo); font-size: 16px; margin-bottom: 10px; font-weight: 700; }
+        .card-clean p { font-size: 13px; color: var(--texto-suave); line-height: 1.5; }
 
         /* ==========================
-        LOCAÇÃO DE EQUIPAMENTOS (DESIGN NOVO COM BADGES)
+        LOCAÇÃO DE EQUIPAMENTOS
         ========================== */
         .locacao-secao-titulo {
             font-family: 'Cormorant Garamond', serif;
@@ -357,48 +327,13 @@
             z-index: 10;
         }
 
-        .equipamento-foto {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 2px solid var(--bordo-suave);
-        }
+        .equipamento-foto { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--bordo-suave); }
+        .equipamento-info { padding: 25px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; }
+        .equipamento-info h4 { color: var(--bordo); font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; font-weight: 700; }
+        .equipamento-info h4 i { color: var(--dourado); }
+        .equipamento-info p { font-size: 14px; color: var(--texto-suave); margin-bottom: 15px; }
 
-        .equipamento-info {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .equipamento-info h4 {
-            color: var(--bordo);
-            font-size: 18px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 700;
-        }
-
-        .equipamento-info h4 i {
-            color: var(--dourado);
-        }
-
-        .equipamento-info p {
-            font-size: 14px;
-            color: var(--texto-suave);
-            margin-bottom: 15px;
-        }
-
-        .entrega-tags-container {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
+        .entrega-tags-container { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
         .entrega-tag {
             background: var(--bordo-suave);
             color: var(--bordo);
@@ -411,133 +346,32 @@
             gap: 8px;
             border: 1px solid rgba(92, 15, 25, 0.05);
         }
-
-        .entrega-tag i {
-            color: var(--dourado);
-        }
+        .entrega-tag i { color: var(--dourado); }
 
         /* ==========================
-        ANTES E DEPOIS (ESTILO LADO A LADO)
+        ANTES E DEPOIS
         ========================== */
-        .antes-depois-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .antes-depois-card {
-            background: var(--branco-card);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
-            border: 1px solid rgba(92, 15, 25, 0.08);
-        }
-
-        .antes-depois-titulo {
-            background: var(--bordo);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 1.5px;
-        }
-
-        .antes-depois-container {
-            display: flex;
-        }
-
-        .lado {
-            width: 50%;
-            position: relative;
-        }
-
-        .lado img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .tag-lado {
-            position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 4px 10px;
-            font-size: 11px;
-            font-weight: 700;
-            border-radius: 4px;
-            letter-spacing: 1px;
-        }
-
-        .tag-lado.depois {
-            background: var(--bordo);
-            color: var(--dourado);
-        }
+        .antes-depois-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .antes-depois-card { background: var(--branco-card); border-radius: 20px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.03); border: 1px solid rgba(92, 15, 25, 0.08); }
+        .antes-depois-titulo { background: var(--bordo); color: white; text-align: center; padding: 15px; font-weight: 700; font-size: 14px; letter-spacing: 1.5px; }
+        .antes-depois-container { display: flex; }
+        .lado { width: 50%; position: relative; }
+        .lado img { width: 100%; height: 230px; object-fit: cover; display: block; }
+        .tag-lado { position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; font-size: 11px; font-weight: 700; border-radius: 4px; letter-spacing: 1px; }
+        .tag-lado.depois { background: var(--bordo); color: var(--dourado); }
 
         /* ==========================
-        COMO FUNCIONA (CRONOGRAMA NOVO)
+        COMO FUNCIONA
         ========================== */
-        .como-funciona-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .como-card {
-            background: var(--branco-card);
-            padding: 35px 25px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            border: 1px solid rgba(92, 15, 25, 0.08);
-            position: relative;
-        }
-
-        .como-numero {
-            position: absolute;
-            top: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--bordo);
-            color: var(--dourado);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--dourado);
-        }
-
-        .como-card i {
-            font-size: 28px;
-            color: var(--bordo);
-            margin: 15px 0;
-        }
-
-        .como-card h3 {
-            font-size: 17px;
-            color: var(--bordo);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .como-card p {
-            font-size: 13px;
-            color: var(--texto-suave);
-        }
+        .como-funciona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .como-card { background: var(--branco-card); padding: 35px 25px; border-radius: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid rgba(92, 15, 25, 0.08); position: relative; }
+        .como-numero { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: var(--bordo); color: var(--dourado); width: 36px; height: 36px; border-radius: 50%; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--dourado); }
+        .como-card i { font-size: 28px; color: var(--bordo); margin: 15px 0; }
+        .como-card h3 { font-size: 17px; color: var(--bordo); margin-bottom: 10px; font-weight: 700; }
+        .como-card p { font-size: 13px; color: var(--texto-suave); }
 
         /* ==========================
-        QUEM SOMOS (JUNÇÃO: BOX MODERNO + FOTO ANTIGA)
+        QUEM SOMOS (ESTILO ANTIGO COM A FOTO E DESTAQUES COESOS)
         ========================== */
         .quem-box {
             background-color: var(--bordo);
@@ -559,26 +393,15 @@
         .quem-img-container {
             width: 100%;
             max-width: 380px; 
+            margin: 0 auto;
             overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.25);
             border: 2px solid var(--dourado);
-            margin: 0 auto;
         }
 
-        .quem-img-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        .quem-content p {
-            line-height: 1.7;
-            margin-bottom: 15px;
-            font-size: 14px; 
-            color: rgba(255, 255, 255, 0.9);
-        }
+        .quem-grid img { width: 100%; display: block; }
+        .quem-content p { line-height: 1.7; margin-bottom: 15px; font-size: 14px; color: rgba(255, 255, 255, 0.9); }
 
         .destaque-container {
             display: grid;
@@ -601,83 +424,42 @@
         }
 
         /* ==========================
-        DEPOIMENTOS 
+        DEPOIMENTOS
         ========================== */
-        .depoimentos-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .depoimento-card {
-            background: var(--branco-card);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            border: 1px solid rgba(92, 15, 25, 0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .estrelas {
-            color: var(--dourado);
-            margin-bottom: 12px;
-            font-size: 13px;
-        }
-
-        .depoimento-texto {
-            font-size: 13px;
-            font-style: italic;
-            color: var(--texto-suave);
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .autor-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .autor-avatar {
-            width: 40px;
-            height: 40px;
-            background: var(--bordo-suave);
-            color: var(--bordo);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 14px;
-        }
-
-        .autor-nome h5 {
-            font-size: 13px;
-            color: var(--bordo);
-            font-weight: 700;
-        }
-
-        .autor-nome p {
-            font-size: 11px;
-            color: var(--texto-suave);
-        }
+        .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
+        .depoimento-card { background: var(--branco-card); padding: 30px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid rgba(92, 15, 25, 0.08); display: flex; flex-direction: column; justify-content: space-between; }
+        .estrelas { color: var(--dourado); margin-bottom: 12px; font-size: 13px; }
+        .depoimento-texto { font-size: 13px; font-style: italic; color: var(--texto-suave); line-height: 1.6; margin-bottom: 15px; }
+        .autor-info { display: flex; align-items: center; gap: 12px; }
+        .autor-avatar { width: 40px; height: 40px; background: var(--bordo-suave); color: var(--bordo); font-weight: 700; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 14px; }
+        .autor-nome h5 { font-size: 13px; color: var(--bordo); font-weight: 700; }
+        .autor-nome p { font-size: 11px; color: var(--texto-suave); }
 
         /* ==========================
-        PORTFÓLIO (GRID REFINADO)
+        NOVO PORTFÓLIO: CARROSSEL DINÂMICO SLIDE LATERAL
         ========================== */
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr); 
-            gap: 15px;
+        .portfolio-slider-container {
+            position: relative;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .portfolio-wrapper {
+            overflow-x: auto;
+            display: flex;
+            gap: 20px;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Oculta barra no Firefox */
+            padding: 10px 0;
+        }
+
+        .portfolio-wrapper::-webkit-scrollbar {
+            display: none; /* Oculta barra no Chrome/Safari */
         }
 
         .portfolio-item {
+            min-width: 250px; /* Garante tamanho ideal lado a lado */
             background: var(--branco-card);
             border-radius: 12px;
             overflow: hidden;
@@ -685,246 +467,88 @@
             border: 1px solid rgba(92, 15, 25, 0.05);
             cursor: pointer;
             transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .portfolio-item:hover {
-            transform: scale(1.03);
+            transform: translateY(-4px);
             border-color: var(--bordo);
         }
 
         .portfolio-item img {
             width: 100%;
-            height: 160px; 
+            height: 180px; 
             object-fit: cover;
             display: block;
         }
 
         .portfolio-item p {
-            padding: 8px;
+            padding: 12px;
             font-weight: 600;
-            font-size: 11px;
-            text-align: center;
-            color: var(--bordo);
-        }
-
-        /* ==========================
-        FAQ AS SANFONA (INTERATIVO NOVO)
-        ========================== */
-        .faq-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .faq-card {
-            background: var(--branco-card);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-            border-left: 5px solid var(--bordo);
-            border-top: 1px solid rgba(92, 15, 25, 0.05);
-            border-right: 1px solid rgba(92, 15, 25, 0.05);
-            border-bottom: 1px solid rgba(92, 15, 25, 0.05);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-pergunta {
-            padding: 20px;
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--bordo);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-        }
-
-        .faq-pergunta i.seta {
-            font-size: 14px;
-            color: var(--dourado);
-            transition: transform 0.3s;
-        }
-
-        .faq-resposta {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
-            padding: 0 20px;
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--texto-suave);
-            background: #FAF8F5;
-        }
-
-        .faq-card.ativo .faq-resposta {
-            padding: 0 20px 20px 20px;
-            max-height: 250px; 
-        }
-
-        .faq-card.ativo .faq-pergunta i.seta {
-            transform: rotate(180deg);
-        }
-
-        /* SEO BOX LOCAL */
-        .seo-box {
-            background: var(--branco-card);
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 35px 25px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            border: 1px solid rgba(92, 15, 25, 0.08);
-            border-top: 4px solid var(--dourado);
-        }
-
-        .seo-box i {
-            font-size: 36px;
-            color: var(--dourado);
-            margin-bottom: 12px;
-        }
-
-        .seo-box h2 {
-            color: var(--bordo);
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-
-        .seo-box p {
-            max-width: 800px;
-            margin: 10px auto;
-            line-height: 1.6;
             font-size: 13px;
-            color: var(--texto-suave);
-        }
-
-        /* ==========================
-        CONTATOS DINÂMICOS
-        ========================== */
-        .contato-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .contato-card {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 25px 15px;
-            border-radius: 16px;
-            background: var(--branco-card); 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            transition: all 0.3s;
-            border: 1px solid rgba(92, 15, 25, 0.08);
-        }
-
-        .contato-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(92, 15, 25, 0.08);
-            border-color: var(--bordo);
-        }
-
-        .contato-card i {
-            font-size: 36px;
-            margin-bottom: 12px;
-        }
-
-        .contato-card.c-whatsapp i {
-            color: var(--verde-whatsapp);
-        }
-
-        .contato-card.c-instagram i {
-            background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .contato-card.c-email i {
-            color: var(--vermelho-gmail);
-        }
-
-        .contato-card.c-regiao i {
-            color: var(--azul-maps);
-        }
-
-        .contato-card h3 {
-            font-size: 14px;
-            color: var(--bordo); 
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
-
-        .contato-card p {
-            font-size: 12px;
-            color: var(--texto-suave);
             text-align: center;
+            color: var(--bordo);
         }
 
-        /* ==========================
-        RODAPÉ MINIMALISTA
-        ========================== */
-        footer {
+        /* Botões do Carrossel */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             background: var(--bordo);
             color: white;
-            padding: 20px 10px; 
-            text-align: center;
-            border-top: 3px solid var(--dourado);
-        }
-
-        footer h3 {
-            color: var(--dourado);
-            font-size: 15px;
-            margin-bottom: 2px;
-        }
-
-        .footer-slogan {
-            font-size: 11px;
-            margin-bottom: 8px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-
-        .footer-copy {
-            font-size: 10px;
-            opacity: 0.6;
-        }
-
-        /* BOTÃO FLUTUANTE */
-        .whatsapp-float {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 60px;
-            height: 60px;
-            background: var(--verde-whatsapp);
+            border: 1px solid var(--dourado);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
-            text-decoration: none;
-            z-index: 9999;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-            animation: pulse 2s infinite;
-            transition: transform 0.3s;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
+        .slider-btn:hover { background: #420a11; scale: 1.1; }
+        .slider-btn.left { left: 0; }
+        .slider-btn.right { right: 0; }
 
-        .whatsapp-float i {
-            font-size: 30px;
-            color: white;
-        }
+        /* ==========================
+        FAQ / SECTIONS RESTANTES
+        ========================== */
+        .faq-grid { display: flex; flex-direction: column; gap: 15px; max-width: 850px; margin: 0 auto; }
+        .faq-card { background: var(--branco-card); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.01); border-left: 5px solid var(--bordo); border-top: 1px solid rgba(92, 15, 25, 0.05); border-right: 1px solid rgba(92, 15, 25, 0.05); border-bottom: 1px solid rgba(92, 15, 25, 0.05); overflow: hidden; transition: all 0.3s ease; }
+        .faq-pergunta { padding: 20px; font-size: 15px; font-weight: 700; color: var(--bordo); cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+        .faq-pergunta i.seta { font-size: 14px; color: var(--dourado); transition: transform 0.3s; }
+        .faq-resposta { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; padding: 0 20px; font-size: 14px; line-height: 1.6; color: var(--texto-suave); background: #FAF8F5; }
+        .faq-card.ativo .faq-resposta { padding: 0 20px 20px 20px; max-height: 250px; }
+        .faq-card.ativo .faq-pergunta i.seta { transform: rotate(180deg); }
+
+        .seo-box { background: var(--branco-card); max-width: 1000px; margin: 0 auto; padding: 35px 25px; border-radius: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid rgba(92, 15, 25, 0.08); border-top: 4px solid var(--dourado); }
+        .seo-box i { font-size: 36px; color: var(--dourado); margin-bottom: 12px; }
+        .seo-box h2 { color: var(--bordo); font-size: 24px; margin-bottom: 12px; }
+        .seo-box p { max-width: 800px; margin: 10px auto; line-height: 1.6; font-size: 13px; color: var(--texto-suave); }
+
+        .contato-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .contato-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 25px 15px; border-radius: 16px; background: var(--branco-card); box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: all 0.3s; border: 1px solid rgba(92, 15, 25, 0.08); }
+        .contato-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(92, 15, 25, 0.08); border-color: var(--bordo); }
+        .contato-card i { font-size: 36px; margin-bottom: 12px; }
+        .contato-card.c-whatsapp i { color: var(--verde-whatsapp); }
+        .contato-card.c-instagram i { background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .contato-card.c-email i { color: var(--vermelho-gmail); }
+        .contato-card.c-regiao i { color: var(--azul-maps); }
+        .contato-card h3 { font-size: 14px; color: var(--bordo); margin-bottom: 6px; font-weight: 700; }
+        .contato-card p { font-size: 12px; color: var(--texto-suave); text-align: center; }
+
+        footer { background: var(--bordo); color: white; padding: 20px 10px; text-align: center; border-top: 3px solid var(--dourado); }
+        footer h3 { color: var(--dourado); font-size: 15px; margin-bottom: 2px; }
+        .footer-slogan { font-size: 11px; margin-bottom: 8px; letter-spacing: 1.5px; text-transform: uppercase; }
+        .footer-copy { font-size: 10px; opacity: 0.6; }
+
+        .whatsapp-float { position: fixed; right: 25px; bottom: 25px; width: 60px; height: 60px; background: var(--verde-whatsapp); border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; z-index: 9999; box-shadow: 0 6px 20px rgba(0,0,0,0.2); animation: pulse 2s infinite; transition: transform 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float i { font-size: 30px; color: white; }
 
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
@@ -932,122 +556,35 @@
             100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
         }
 
-        /* LIGHTBOX */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            cursor: pointer;
-        }
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 99999; cursor: pointer; }
+        .lightbox img { max-width: 90%; max-height: 85%; border-radius: 10px; border: 2px solid var(--dourado); }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 85%;
-            border-radius: 10px;
-            border: 2px solid var(--dourado);
-        }
-
-        /* ==========================
-        RESPONSIVIDADE INTELIGENTE
-        ========================== */
+        /* RESPONSIVIDADE */
         @media(max-width: 992px) {
-            .cards-servicos {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .portfolio {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .cards-servicos { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media(max-width: 900px) {
-            section {
-                padding: 60px 5%;
-            }
-
-            .quem-box {
-                border-radius: 15px;
-                padding: 30px 20px;
-            }
-
-            header {
-                padding: 10px 5%;
-                height: 70px;
-            }
-
-            .logo img {
-                height: 48px;
-            }
-
-            nav a {
-                font-size: 11px;
-                padding: 6px 10px;
-            }
-
-            .hero {
-                margin: 90px 15px 30px 15px; 
-                border-radius: 20px;
-                padding: 50px 15px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-slogan {
-                font-size: 14px;
-                letter-spacing: 3px;
-            }
-
-            .hero-text {
-                font-size: 15px;
-            }
-
-            .como-funciona-grid, .depoimentos-grid, .antes-depois-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .quem-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .destaque-container {
-                grid-template-columns: 1fr;
-            }
-
-            .locacao-individual-grid, .kits-individual-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .contato-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-
-            .section-title {
-                font-size: 34px;
-            }
+            section { padding: 60px 5%; }
+            .quem-box { border-radius: 15px; padding: 30px 20px; }
+            header { padding: 10px 5%; height: 70px; }
+            .logo img { height: 48px; }
+            nav a { font-size: 11px; padding: 6px 10px; }
+            .hero { margin: 90px 15px 30px 15px; border-radius: 20px; padding: 50px 15px; }
+            .hero h1 { font-size: 36px; }
+            .hero-slogan { font-size: 14px; letter-spacing: 3px; }
+            .hero-text { font-size: 15px; }
+            .como-funciona-grid, .depoimentos-grid, .antes-depois-grid, .quem-grid, .destaque-container, .locacao-individual-grid, .kits-individual-grid { grid-template-columns: 1fr; gap: 25px; }
+            .contato-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .section-title { font-size: 34px; }
+            .portfolio-slider-container { padding: 0 10px; }
+            .slider-btn { display: none; } /* Em telas touch, desliza com o dedo */
         }
 
         @media(max-width: 480px) {
-            nav {
-                display: none; 
-            }
-            header {
-                justify-content: center; 
-            }
-            .cards-servicos, .portfolio, .contato-grid {
-                grid-template-columns: 1fr;
-            }
+            nav { display: none; }
+            header { justify-content: center; }
+            .cards-servicos, .contato-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1065,11 +602,12 @@
             <a href="#antes-depois">Resultados</a>
             <a href="#como-funciona">Como Funciona</a>
             <a href="#quem">Quem Somos</a>
+            <a href="#portfolio">Portfólio</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <!-- BANNER PRINCIPAL FLUTUANTE (HERO COM IMAGEM) -->
+    <!-- BANNER PRINCIPAL (HERO ANTIGO PREFERIDO) -->
     <section class="hero">
         <div class="hero-content">
             <h1>B&B Soluções</h1>
@@ -1082,7 +620,7 @@
                 Sem estresse, sem surpresas e com hora marcada em Curitiba e Região Metropolitana.
             </div>
             <div class="hero-buttons">
-                <a href="https://wa.me/5541985381967?text=Olá! Gostaria de solicitar um orçamento para serviços residenciais." target="_blank" class="btn">
+                <a href="https://wa.me/5541985381967?text=Olá! Gostaria de solicitar um orçamento para services residenciais." target="_blank" class="btn">
                     <i class="fab fa-whatsapp"></i> Solicite um Orçamento
                 </a>
             </div>
@@ -1116,7 +654,6 @@
         
         <h3 class="locacao-secao-titulo">Nossos Equipamentos</h3>
         <div class="locacao-individual-grid">
-            <!-- EXTRATORA -->
             <div class="equipamento-card">
                 <span class="card-badge">Período: 24h ou 12h</span>
                 <img src="extratora.jpeg" alt="Locação de Extratora Profissional" class="equipamento-foto">
@@ -1133,7 +670,6 @@
                 </div>
             </div>
 
-            <!-- LAVADORA -->
             <div class="equipamento-card">
                 <span class="card-badge">Período: 24h ou 12h</span>
                 <img src="lavadora.jpeg" alt="Lavadora de Alta Pressão" class="equipamento-foto">
@@ -1343,27 +879,34 @@
         </div>
     </section>
 
-    <!-- 7. PORTFÓLIO -->
+    <!-- 7. NOVO PORTFÓLIO (EM FORMATO DE CARROSSEL LATERAL) -->
     <section id="portfolio" class="bg-confort">
         <div class="title-wrapper">
             <h2 class="section-title">Portfólio de Atendimentos</h2>
             <p class="section-subtitle">Confira fotos reais das nossas montagens de suportes, tomadas e reparos diversos concluídos com carinho.</p>
         </div>
-        <div class="portfolio">
-            <div class="portfolio-item"><img src="servico1.jpeg" alt="Instalação"><p>Instalação Geral</p></div>
-            <div class="portfolio-item"><img src="servico2.jpeg" alt="Montagem"><p>Ajustes em Portas</p></div>
-            <div class="portfolio-item"><img src="servico3.jpeg" alt="Reparo"><p>Reparos Elétricos</p></div>
-            <div class="portfolio-item"><img src="servico4.jpeg" alt="Acessórios"><p>Fixação de Acessórios</p></div>
-            <div class="portfolio-item"><img src="servico5.jpeg" alt="Manutenção"><p>Instalações Modernas</p></div>
-            <div class="portfolio-item"><img src="servico6.jpeg" alt="Pequenos Reparos"><p>Prateleiras e Quadros</p></div>
-            <div class="portfolio-item"><img src="servico7.jpeg" alt="Fixação"><p>Cortinas e Trilhos</p></div>
-            <div class="portfolio-item"><img src="servico8.jpeg" alt="Instalação"><p>Iluminação Decorativa</p></div>
-            <div class="portfolio-item"><img src="servico9.jpeg" alt="Melhorias"><p>Ajustes de Tomadas</p></div>
-            <div class="portfolio-item"><img src="servico10.jpeg" alt="Finalizado"><p>Suporte de TV</p></div>
+        
+        <div class="portfolio-slider-container">
+            <button class="slider-btn left" onclick="slidePortfolio('left')"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="portfolio-wrapper" id="portfolioWrapper">
+                <div class="portfolio-item"><img src="servico1.jpeg" alt="Instalação"><p>Instalação Geral</p></div>
+                <div class="portfolio-item"><img src="servico2.jpeg" alt="Montagem"><p>Ajustes em Portas</p></div>
+                <div class="portfolio-item"><img src="servico3.jpeg" alt="Reparo"><p>Reparos Elétricos</p></div>
+                <div class="portfolio-item"><img src="servico4.jpeg" alt="Acessórios"><p>Fixação de Acessórios</p></div>
+                <div class="portfolio-item"><img src="servico5.jpeg" alt="Manutenção"><p>Instalações Modernas</p></div>
+                <div class="portfolio-item"><img src="servico6.jpeg" alt="Pequenos Reparos"><p>Prateleiras e Quadros</p></div>
+                <div class="portfolio-item"><img src="servico7.jpeg" alt="Fixação"><p>Cortinas e Trilhos</p></div>
+                <div class="portfolio-item"><img src="servico8.jpeg" alt="Instalação"><p>Iluminação Decorativa</p></div>
+                <div class="portfolio-item"><img src="servico9.jpeg" alt="Melhorias"><p>Ajustes de Tomadas</p></div>
+                <div class="portfolio-item"><img src="servico10.jpeg" alt="Finalizado"><p>Suporte de TV</p></div>
+            </div>
+
+            <button class="slider-btn right" onclick="slidePortfolio('right')"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <!-- 8. PERGUNTAS FREQUENTES (SANFONA INTERATIVA) -->
+    <!-- 8. PERGUNTAS FREQUENTES -->
     <section id="faq" class="bg-alternado">
         <div class="title-wrapper">
             <h2 class="section-title">Dúvidas Frequentes</h2>
@@ -1371,40 +914,20 @@
         </div>
         <div class="faq-grid">
             <div class="faq-card">
-                <div class="faq-pergunta">
-                    Vocês cobram taxa para fazer orçamento online?
-                    <i class="fas fa-chevron-down seta"></i>
-                </div>
-                <div class="faq-resposta">
-                    Não! O orçamento via WhatsApp é totalmente gratuito. Enviando fotos ou um pequeno vídeo da sua necessidade, calculamos os valores exatos para você de forma rápida.
-                </div>
+                <div class="faq-pergunta">Vocês cobram taxa para fazer orçamento online? <i class="fas fa-chevron-down seta"></i></div>
+                <div class="faq-resposta">Não! O orçamento via WhatsApp é totalmente gratuito. Enviando fotos ou um pequeno vídeo da sua necessidade, calculamos os valores exatos para você de forma rápida.</div>
             </div>
             <div class="faq-card">
-                <div class="faq-pergunta">
-                    Como funciona a entrega e retirada das máquinas alugadas?
-                    <i class="fas fa-chevron-down seta"></i>
-                </div>
-                <div class="faq-resposta">
-                    Nós calculamos o valor do frete conforme o seu bairro em Curitiba ou Região Metropolitana. Entregamos a máquina higienizada na sua porta com o suporte técnico e buscamos no prazo combinado.
-                </div>
+                <div class="faq-pergunta">Como funciona a entrega e retirada das máquinas alugadas? <i class="fas fa-chevron-down seta"></i></div>
+                <div class="faq-resposta">Nós calculamos o valor do frete conforme o seu bairro em Curitiba ou Região Metropolitana. Entregamos a máquina higienizada na sua porta com o suporte técnico e buscamos no prazo combinado.</div>
             </div>
             <div class="faq-card">
-                <div class="faq-pergunta">
-                    Vocês realizam serviços de faxina ou limpeza residencial?
-                    <i class="fas fa-chevron-down seta"></i>
-                </div>
-                <div class="faq-resposta">
-                    Não fazemos serviços de limpeza doméstica. Nós focamos em pequenos reparos, instalações residenciais e oferecemos o serviço exclusivo de locação de maquinários profissionais para que você mesmo execute a sua higienização com enorme economia.
-                </div>
+                <div class="faq-pergunta">Vocês realizam serviços de faxina ou limpeza residencial? <i class="fas fa-chevron-down seta"></i></div>
+                <div class="faq-resposta">Não fazemos serviços de limpeza doméstica. Nós focamos em pequenos reparos, instalações residenciais e oferecemos o serviço exclusivo de locação de maquinários profissionais para que você mesmo execute a sua higienização com enorme economia.</div>
             </div>
             <div class="faq-card">
-                <div class="faq-pergunta">
-                    Como funcionam as formas de pagamento?
-                    <i class="fas fa-chevron-down seta"></i>
-                </div>
-                <div class="faq-resposta">
-                    Trabalhamos com Pix direto, cartões de débito e crédito parcelado. O pagamento do seu atendimento ou locação é executado com total segurança somente após a conclusão dos reparos ou no momento da entrega das máquinas.
-                </div>
+                <div class="faq-pergunta">Como funcionam as formas de pagamento? <i class="fas fa-chevron-down seta"></i></div>
+                <div class="faq-resposta">Trabalhamos com Pix direto, cartões de débito e crédito parcelado. O pagamento do seu atendimento ou locação é executado com total segurança somente após a conclusão dos reparos ou no momento da entrega das máquinas.</div>
             </div>
         </div>
     </section>
@@ -1414,12 +937,8 @@
         <div class="seo-box">
             <i class="fas fa-house-circle-check"></i>
             <h2>Procurando "Faz-Tudo" ou "Marido de Aluguel" em Curitiba e Região Metropolitana?</h2>
-            <p>
-                A B&B Soluções atende Curitiba e Região Metropolitana oferecendo pequenos reparos profissionais executados com máxima delicadeza técnica por mulheres capacitadas, garantindo segurança total.
-            </p>
-            <p>
-                Além de serviços de furação e montagem, fornecemos suporte completo para locações de extratoras de estofados e lavadoras com entrega e busca efetuadas diretamente no seu endereço residencial.
-            </p>
+            <p>A B&B Soluções atende Curitiba e Região Metropolitana oferecendo pequenos reparos profissionais executados com máxima delicadeza técnica por mulheres capacitadas, garantindo segurança total.</p>
+            <p>Além de serviços de furação e montagem, fornecemos suporte completo para locações de extratoras de estofados e lavadoras com entrega e busca efetuadas diretamente no seu endereço residencial.</p>
         </div>
     </section>
 
@@ -1453,25 +972,36 @@
         </div>
     </section>
 
-    <!-- RODAPÉ MINIMALISTA -->
+    <!-- RODAPÉ -->
     <footer>
         <h3>B&B Soluções</h3>
         <p class="footer-slogan">Elas Resolvem</p>
         <p class="footer-copy">© 2026 B&B Soluções • Curitiba e Região Metropolitana • Todos os direitos reservados</p>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <!-- BOTÃO FLUTUANTE -->
     <a class="whatsapp-float" href="https://wa.me/5541985381967?text=Olá! Preciso de um orçamento." target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- LIGHTBOX DO PORTFÓLIO -->
+    <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox">
         <img id="lightbox-img" alt="Visualização expandida">
     </div>
 
     <!-- SCRIPTS INTERATIVOS -->
     <script>
+        // Lógica de Movimentação do Carrossel do Portfólio
+        function slidePortfolio(direction) {
+            const container = document.getElementById('portfolioWrapper');
+            const scrollAmount = 300; // Distância do clique lateral
+            if (direction === 'left') {
+                container.scrollLeft -= scrollAmount;
+            } else {
+                container.scrollLeft += scrollAmount;
+            }
+        }
+
         // Lightbox para Ampliar Fotos do Portfólio
         const imagens = document.querySelectorAll('.portfolio-item img');
         const lightbox = document.getElementById('lightbox');
@@ -1488,7 +1018,7 @@
             lightbox.style.display = 'none';
         });
 
-        // FAQ Interativo (Efeito Sanfona)
+        // FAQ Interativo
         const faqCards = document.querySelectorAll('.faq-card');
         faqCards.forEach(card => {
             const pergunta = card.querySelector('.faq-pergunta');
