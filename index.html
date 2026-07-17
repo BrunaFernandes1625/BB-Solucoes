@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B&B Soluções | Manutenção Residencial e Comercial Premium</title>
-    <meta name="description" content="Serviços de marido de aluguel, reparos, instalações e locação de equipamentos profissionais. Gestão feminina com máxima confiança, capricho e qualidade.">
+    <title>B&B Soluções | Manutenção e Locação Premium em Curitiba</title>
+    <meta name="description" content="Serviços de marido de aluguel, reparos e locação de equipamentos em Curitiba e Região Metropolitana. Gestão feminina com o cuidado que seu imóvel merece. Elas Resolvem!">
     
-    <!-- Open Graph / Facebook / WhatsApp Link Share -->
+    <!-- Open Graph / Redes Sociais -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bebsolucoes.com.br">
-    <meta property="og:title" content="B&B Soluções | Manutenção e Reparos Premium">
-    <meta property="og:description" content="Confiança, praticidade e alto padrão para sua casa ou empresa. Duas mulheres na liderança entregando a melhor manutenção do mercado.">
+    <meta property="og:title" content="B&B Soluções | Elas Resolvem! Manutenção Premium">
+    <meta property="og:description" content="Atendimento a domicílio em Curitiba e RMC. Reparos, instalações e locação de extratoras e lavadoras com entrega e retirada inclusas.">
 
-    <!-- Tailwind CSS para o Design -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,10 +34,10 @@
         }
     </script>
 
-    <!-- Alpine.js para o funcionamento do FAQ Interativo -->
+    <!-- Alpine.js para o FAQ -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- Fonte Inter elegante -->
+    <!-- Fonte Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -45,23 +45,20 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 
-    <!-- Schema.org para Google SEO Local -->
+    <!-- Schema.org Otimizado para Serviço a Domicílio em Curitiba -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "B&B Soluções",
-      "description": "Manutenção residencial/comercial e locação de equipamentos.",
+      "description": "Serviços de marido de aluguel, manutenção e locação de equipamentos a domicílio.",
       "url": "https://bebsolucoes.com.br",
-      "telephone": "+5511999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Paulista, 1000",
-        "addressLocality": "São Paulo",
-        "addressRegion": "SP",
-        "postalCode": "01310-100",
-        "addressCountry": "BR"
-      }
+      "telephone": "+5541985381967",
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Curitiba" },
+        { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" }
+      ],
+      " canDeliveryJob": "true"
     }
     </script>
 </head>
@@ -70,9 +67,12 @@
     <!-- HEADER / NAVIGATION -->
     <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl font-bold tracking-wider text-brand-burgundy">B&B</span>
-                <span class="text-xs tracking-widest text-brand-gold font-semibold uppercase border-l pl-2 border-brand-gold">Soluções</span>
+            <div class="flex flex-col">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold tracking-wider text-brand-burgundy">B&B</span>
+                    <span class="text-xs tracking-widest text-brand-gold font-semibold uppercase border-l pl-2 border-brand-gold">Soluções</span>
+                </div>
+                <span class="text-[10px] text-brand-burgundy font-medium tracking-wider -mt-1 uppercase">Elas Resolvem!</span>
             </div>
             <nav class="hidden md:flex space-x-6 text-sm font-medium text-brand-burgundy">
                 <a href="#sobre" class="hover:text-brand-gold transition-colors">Quem Somos</a>
@@ -80,7 +80,7 @@
                 <a href="#locacao" class="hover:text-brand-gold transition-colors">Locação</a>
                 <a href="#por-que" class="hover:text-brand-gold transition-colors">Diferenciais</a>
             </nav>
-            <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!" target="_blank" rel="noopener noreferrer" class="bg-brand-burgundy text-white px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-brand-burgundyDark transition-all hover:scale-105 active:scale-95 shadow-md">
+            <a href="https://wa.me/5541985381967?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20B&B%20Soluções!" target="_blank" rel="noopener noreferrer" class="bg-brand-burgundy text-white px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-brand-burgundyDark transition-all hover:scale-105 active:scale-95 shadow-md">
                 Falar no WhatsApp
             </a>
         </div>
@@ -90,15 +90,15 @@
     <section class="relative bg-gradient-to-br from-brand-burgundy to-brand-burgundyDark text-white py-20 md:py-32 px-4 overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=1200');"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6">
-            <span class="text-brand-gold uppercase tracking-widest text-xs md:text-sm font-semibold inline-block border-b border-brand-gold pb-1">Manutenção Residencial e Comercial Premium</span>
+            <span class="text-brand-gold uppercase tracking-widest text-xs md:text-sm font-semibold inline-block border-b border-brand-gold pb-1">Atendimento em Curitiba e Região Metropolitana</span>
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight">
-                B&B Soluções — Qualidade, <span class="font-semibold text-brand-gold">confiança</span> e praticidade para sua casa ou empresa.
+                B&B Soluções — Qualidade, <span class="font-semibold text-brand-gold">confiança</span> e praticidade onde você estiver.
             </h1>
             <p class="text-gray-300 max-w-xl mx-auto text-sm md:text-base font-light">
-                Reparos, instalações e locação de maquinário profissional conduzidos com o rigor, zelo e excelência que você merece.
+                Reparos residenciais, comerciais e locação de maquinário profissional. Atendimento 100% a domicílio, com entrega e retirada inclusas.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-brand-gold hover:bg-brand-goldHover text-brand-burgundy font-semibold px-8 py-4 rounded-xl transition-all shadow-lg text-center text-sm md:text-base">
+                <a href="https://wa.me/5541985381967?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20B&B%20Soluções!" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-brand-gold hover:bg-brand-goldHover text-brand-burgundy font-semibold px-8 py-4 rounded-xl transition-all shadow-lg text-center text-sm md:text-base">
                     Solicitar orçamento no WhatsApp
                 </a>
                 <a href="#servicos" class="w-full sm:w-auto border border-white/30 hover:border-white hover:bg-white/5 text-white px-8 py-4 rounded-xl transition-all text-center text-sm md:text-base">
@@ -112,10 +112,10 @@
     <section id="sobre" class="py-16 md:py-24 max-w-5xl mx-auto px-4 text-center">
         <div class="bg-white rounded-3xl p-8 md:p-16 shadow-xl shadow-gray-100 border border-gray-50 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-2 h-full bg-brand-gold"></div>
-            <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Liderança Feminina</span>
-            <h2 className="text-2xl md:text-3xl font-semibold text-brand-burgundy mt-2 mb-4" style="color: #5B0E2D; font-size: 1.875rem; font-weight: 600;">Quem Somos</h2>
-            <p class="text-brand-muted max-w-2xl mx-auto leading-relaxed text-base md:text-lg font-light mt-2">
-                Somos uma empresa administrada por <strong>duas mulheres</strong> determinadas a redefinir o mercado de manutenção e reparos. Unimos sensibilidade, compromisso técnico e dedicação absoluta para entregar serviços com organização impecável, pontualidade e o máximo de respeito ao seu ambiente residencial ou comercial.
+            <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Elas Resolvem!</span>
+            <h2 class="text-2xl md:text-3xl font-semibold text-brand-burgundy mt-2 mb-4">Quem Somos</h2>
+            <p class="text-brand-muted max-w-2xl mx-auto leading-relaxed text-base md:text-lg font-light">
+                Somos uma empresa de Curitiba administrada por <strong>duas mulheres</strong> altamente comprometidas em redefinir o mercado de manutenção. Não possuímos ponto fixo pois nosso foco é a conveniência total: <strong>vamos até a sua casa, condomínio ou empresa</strong> para realizar os reparos ou entregar os equipamentos de locação com pontualidade, capricho e máxima segurança.
             </p>
         </div>
     </section>
@@ -125,7 +125,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-semibold text-brand-burgundy">Nossos Serviços</h2>
-                <p class="text-brand-muted mt-2 text-sm md:text-base">Soluções completas e pequenos reparos executados com precisão.</p>
+                <p class="text-brand-muted mt-2 text-sm md:text-base">Executados diretamente no seu imóvel, com agendamento flexível.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Card 1 -->
@@ -135,35 +135,32 @@
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.381-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
                         </div>
                         <h3 class="font-semibold text-brand-burgundy text-lg mb-2">Marido de Aluguel / Faz Tudo</h3>
-                        <p class="text-brand-muted text-sm font-light">Resolução rápida de problemas e pendências estruturais do seu dia a dia.</p>
+                        <p class="text-brand-muted text-sm font-light">Instalação de prateleiras, cortinas, quadros, painéis e suportes de TV com total alinhamento.</p>
                     </div>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="mt-6 text-xs font-semibold text-brand-gold uppercase tracking-wider group-hover:text-brand-burgundy transition-colors">Solicitar Orçamento &rarr;</a>
+                    <a href="https://wa.me/5541985381967?text=Quero%20um%20orçamento%20para%20Marido%20de%20Aluguel" target="_blank" class="mt-6 text-xs font-semibold text-brand-gold uppercase tracking-wider group-hover:text-brand-burgundy transition-colors">Solicitar Orçamento &rarr;</a>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-gray-100 transition-all group hover:-translate-y-1 flex flex-col justify-between">
                     <div>
                         <div class="w-10 h-10 rounded-xl bg-brand-burgundy/5 flex items-center justify-center text-brand-burgundy group-hover:bg-brand-burgundy group-hover:text-white transition-colors duration-300 mb-4">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
-                        <h3 class="font-semibold text-brand-burgundy text-lg mb-2">Instalações Gerais</h3>
-                        <p class="text-brand-muted text-sm font-light">Instalação segura de prateleiras, cortinas, quadros e suportes de TV articulados ou fixos.</p>
+                        <h3 class="font-semibold text-brand-burgundy text-lg mb-2">Pequenos Reparos Hidráulicos e Elétricos</h3>
+                        <p class="text-brand-muted text-sm font-light">Troca de torneiras, reparo de vazamentos simples, substituição de tomadas, chuveiros e luminárias.</p>
                     </div>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="mt-6 text-xs font-semibold text-brand-gold uppercase tracking-wider group-hover:text-brand-burgundy transition-colors">Solicitar Orçamento &rarr;</a>
+                    <a href="https://wa.me/5541985381967?text=Quero%20um%20orçamento%20para%20Reparos" target="_blank" class="mt-6 text-xs font-semibold text-brand-gold uppercase tracking-wider group-hover:text-brand-burgundy transition-colors">Solicitar Orçamento &rarr;</a>
                 </div>
                 <!-- Card 3 -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-gray-100 transition-all group hover:-translate-y-1 flex flex-col justify-between">
                     <div>
                         <div class="w-10 h-10 rounded-xl bg-brand-burgundy/5 flex items-center justify-center text-brand-burgundy group-hover:bg-brand-burgundy group-hover:text-white transition-colors duration-300 mb-4">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                         </div>
-                        <h3 class="font-semibold text-brand-burgundy text-lg mb-2">Reparos Elétricos e Hidráulicos</h3>
-                        <p class="text-brand-muted text-sm font-light">Troca de torneiras, reparo de vazamentos, substituição de tomadas, luminárias e chuveiros.</p>
+                        <h3 class="font-semibold text-brand-burgundy text-lg mb-2">Manutenção Residencial & Comercial</h3>
+                        <p class="text-brand-muted text-sm font-light">Montagem de móveis, pinturas pontuais e manutenções preventivas para comércios, escritórios e residências.</p>
                     </div>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="mt-6 text-xs font-semibold text-brand-gold uppercase tracking-wider group-hover:text-brand-burgundy transition-colors">Solicitar Orçamento &rarr;</a>
+                    <a href="https://wa.me/5541985381967?text=Quero%20um%20orçamento%20para%20Manutenção" target="_blank" class="mt-6 text-xs font-semibold text-brand-gold uppercase tracking-wider group-hover:text-brand-burgundy transition-colors">Solicitar Orçamento &rarr;</a>
                 </div>
-            </div>
-            <div class="text-center mt-8 text-xs text-brand-muted tracking-wider">
-                E mais: Montagem de Móveis • Pinturas • Manutenções Comerciais e Residenciais Completas.
             </div>
         </div>
     </section>
@@ -171,8 +168,9 @@
     <!-- 4. LOCAÇÃO DE EQUIPAMENTOS -->
     <section id="locacao" class="py-16 md:py-24 px-4 max-w-5xl mx-auto">
         <div class="text-center mb-12">
-            <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Faça Você Mesmo com Equipamento de Ponta</span>
-            <h2 class="text-3xl font-semibold text-brand-burgundy mt-1">Locação de Equipamentos Profissionais</h2>
+            <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Sistema Leva e Busca Otimizado</span>
+            <h2 class="text-3xl font-semibold text-brand-burgundy mt-1">Locação de Equipamentos com Entrega Inclusa</h2>
+            <p class="text-brand-muted text-sm mt-2">Nós entregamos o equipamento na sua porta e buscamos após o uso. Comodidade total.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Equipamento 1 -->
@@ -180,14 +178,14 @@
                 <div class="p-8">
                     <div class="h-40 w-full bg-brand-burgundy/5 rounded-2xl flex items-center justify-center text-brand-burgundy/40 font-mono text-xs uppercase mb-6">[ Extratora Profissional ]</div>
                     <h3 class="text-xl font-semibold text-brand-burgundy mb-2">Extratora Profissional</h3>
-                    <p class="text-brand-muted text-sm font-light mb-6">Ideal para higienização profunda de estofados, sofás, colchões e tapetes.</p>
+                    <p class="text-brand-muted text-sm font-light mb-6">Ideal para higienização profunda de estofados, sofás, colchões e tapetes na sua casa.</p>
                     <ul class="space-y-2 text-sm text-brand-dark font-medium">
-                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Alta potência de sucção</li>
-                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Resultados profissionais</li>
-                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Fácil manuseio</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Entregamos e buscamos em Curitiba e RMC</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Resultados profissionais e higiênicos</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Explicamos o funcionamento passo a passo</li>
                     </ul>
                 </div>
-                <div class="p-8 pt-0"><a href="https://wa.me/5511999999999" target="_blank" class="block text-center w-full bg-brand-burgundy hover:bg-brand-burgundyDark text-white text-sm font-medium py-3 rounded-xl transition-all shadow-md">Alugar Equipamento</a></div>
+                <div class="p-8 pt-0"><a href="https://wa.me/5541985381967?text=Quero%20alugar%20a%20Extratora%20Profissional" target="_blank" class="block text-center w-full bg-brand-burgundy hover:bg-brand-burgundyDark text-white text-sm font-medium py-3 rounded-xl transition-all shadow-md">Alugar Equipamento</a></div>
             </div>
             <!-- Equipamento 2 -->
             <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg flex flex-col justify-between">
@@ -196,12 +194,12 @@
                     <h3 class="text-xl font-semibold text-brand-burgundy mb-2">Lavadora de Alta Pressão</h3>
                     <p class="text-brand-muted text-sm font-light mb-6">Remoção de sujeiras pesadas em calçadas, muros, fachadas e áreas externas.</p>
                     <ul class="space-y-2 text-sm text-brand-dark font-medium">
-                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Economia drástica de água</li>
-                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Pressão regulável potente</li>
-                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Limpeza rápida e eficaz</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Perfeita para limpezas pesadas de fim de semana</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Economia de água com alta pressão</li>
+                        <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Sistema delivery de entrega rápida</li>
                     </ul>
                 </div>
-                <div class="p-8 pt-0"><a href="https://wa.me/5511999999999" target="_blank" class="block text-center w-full bg-brand-burgundy hover:bg-brand-burgundyDark text-white text-sm font-medium py-3 rounded-xl transition-all shadow-md">Alugar Equipamento</a></div>
+                <div class="p-8 pt-0"><a href="https://wa.me/5541985381967?text=Quero%20alugar%20a%20Lavadora%20de%20Alta%20Pressão" target="_blank" class="block text-center w-full bg-brand-burgundy hover:bg-brand-burgundyDark text-white text-sm font-medium py-3 rounded-xl transition-all shadow-md">Alugar Equipamento</a></div>
             </div>
         </div>
     </section>
@@ -211,30 +209,30 @@
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-semibold text-brand-burgundy">Kits Prontos de Limpeza</h2>
-                <p class="text-brand-muted mt-2 text-sm">Maximize sua locação adicionando insumos químicos profissionais recomendados.</p>
+                <p class="text-brand-muted mt-2 text-sm">Adicione os insumos químicos ideais junto com a entrega do seu equipamento.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-6 mb-8">
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
                     <h3 class="text-lg font-semibold text-brand-burgundy border-b pb-2 border-gray-100 mb-3">Kit Sofá</h3>
-                    <p class="text-xs text-brand-gold font-medium uppercase tracking-wider mb-1">Insumos:</p>
+                    <p class="text-xs text-brand-gold font-medium uppercase tracking-wider mb-1">O que acompanha:</p>
                     <p class="text-brand-muted text-sm font-light mb-4">Produtos profissionais biodegradáveis + escova macia.</p>
                     <p class="text-xs text-brand-dark/70 bg-gray-50 p-2 rounded-lg italic">Ideal para estofados em geral.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
                     <h3 class="text-lg font-semibold text-brand-burgundy border-b pb-2 border-gray-100 mb-3">Kit Automotivo</h3>
-                    <p class="text-xs text-brand-gold font-medium uppercase tracking-wider mb-1">Insumos:</p>
+                    <p class="text-xs text-brand-gold font-medium uppercase tracking-wider mb-1">O que acompanha:</p>
                     <p class="text-brand-muted text-sm font-light mb-4">Shampoo interno + revitalizador de plásticos + panos microfibra.</p>
                     <p class="text-xs text-brand-dark/70 bg-gray-50 p-2 rounded-lg italic">Limpeza e brilho interno do carro.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
                     <h3 class="text-lg font-semibold text-brand-burgundy border-b pb-2 border-gray-100 mb-3">Kit Calçadas</h3>
-                    <p class="text-xs text-brand-gold font-medium uppercase tracking-wider mb-1">Insumos:</p>
+                    <p class="text-xs text-brand-gold font-medium uppercase tracking-wider mb-1">O que acompanha:</p>
                     <p class="text-brand-muted text-sm font-light mb-4">Detergente pós-obra concentrado + escova industrial.</p>
                     <p class="text-xs text-brand-dark/70 bg-gray-50 p-2 rounded-lg italic">Limpeza pesada de pisos e pedras.</p>
                 </div>
             </div>
             <div class="bg-brand-burgundy text-white rounded-2xl p-6 text-center max-w-xl mx-auto text-sm md:flex md:justify-between md:items-center">
-                <p class="font-light">Monte do seu jeito:</p>
+                <p class="font-light">Escolha a melhor opção para você:</p>
                 <div class="flex justify-center gap-3 text-xs font-semibold mt-2 md:mt-0">
                     <span class="bg-white/10 px-3 py-1.5 rounded-md">Alugar somente equipamento</span>
                     <span class="bg-brand-gold text-brand-burgundy px-3 py-1.5 rounded-md">Alugar equipamento + kit</span>
@@ -251,15 +249,15 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="flex gap-4 p-4 rounded-xl hover:bg-white transition-colors">
                 <div class="shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold font-bold">✓</div>
-                <div><h3 class="font-medium text-brand-burgundy text-base">Atendimento Rápido</h3><p class="text-brand-muted text-sm font-light mt-0.5">Respostas ágeis diretamente no WhatsApp.</p></div>
+                <div><h3 class="font-medium text-brand-burgundy text-base">Atendimento Rápido</h3><p class="text-brand-muted text-sm font-light mt-0.5">Retorno ágil e sem enrolação no WhatsApp.</p></div>
             </div>
             <div class="flex gap-4 p-4 rounded-xl hover:bg-white transition-colors">
                 <div class="shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold font-bold">✓</div>
-                <div><h3 class="font-medium text-brand-burgundy text-base">Profissionais Responsáveis</h3><p class="text-brand-muted text-sm font-light mt-0.5">Zelo, absoluto capricho e pontualidade.</p></div>
+                <div><h3 class="font-medium text-brand-burgundy text-base">Profissionais Responsáveis</h3><p class="text-brand-muted text-sm font-light mt-0.5">Zelo e respeito total pela privacidade do seu lar.</p></div>
             </div>
             <div class="flex gap-4 p-4 rounded-xl hover:bg-white transition-colors">
                 <div class="shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold font-bold">✓</div>
-                <div><h3 class="font-medium text-brand-burgundy text-base">Serviço de Qualidade</h3><p class="text-brand-muted text-sm font-light mt-0.5">Acabamento estético e estrutural impecável.</p></div>
+                <div><h3 class="font-medium text-brand-burgundy text-base">Logística Facilitada</h3><p class="text-brand-muted text-sm font-light mt-0.5">Esqueça trânsito. Nós levamos e buscamos tudo.</p></div>
             </div>
         </div>
     </section>
@@ -268,28 +266,28 @@
     <section class="bg-brand-burgundy text-white py-16 md:py-24 px-4">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-light tracking-tight">Do Primeiro Contato à Conclusão em <span class="font-semibold text-brand-gold">4 Passos</span></h2>
+                <h2 class="text-3xl font-light tracking-tight">Praticidade Total em <span class="font-semibold text-brand-gold">4 Passos</span></h2>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="space-y-2">
                     <span class="text-4xl lg:text-5xl font-bold text-brand-gold/30 block">01</span>
-                    <h3 class="font-semibold text-lg text-brand-gold">Solicite Orçamento</h3>
-                    <p class="text-gray-300 text-sm font-light">Envie fotos ou detalhes do reparo/locação pelo WhatsApp.</p>
+                    <h3 class="font-semibold text-lg text-brand-gold">Solicite o Orçamento</h3>
+                    <p class="text-gray-300 text-sm font-light">Mande detalhes da sua necessidade diretamente no WhatsApp.</p>
                 </div>
                 <div class="space-y-2">
                     <span class="text-4xl lg:text-5xl font-bold text-brand-gold/30 block">02</span>
-                    <h3 class="font-semibold text-lg text-brand-gold">Receba Atendimento</h3>
-                    <p class="text-gray-300 text-sm font-light">Alinhamos os valores e tiramos todas as dúvidas operacionais.</p>
+                    <h3 class="font-semibold text-lg text-brand-gold">Combine os Detalhes</h3>
+                    <p class="text-gray-300 text-sm font-light">Enviamos os valores de serviço ou o plano de locação perfeito.</p>
                 </div>
                 <div class="space-y-2">
                     <span class="text-4xl lg:text-5xl font-bold text-brand-gold/30 block">03</span>
-                    <h3 class="font-semibold text-lg text-brand-gold">Agende o Serviço</h3>
-                    <p class="text-gray-300 text-sm font-light">Escolha o dia e horário perfeito dentro do seu cronograma.</p>
+                    <h3 class="font-semibold text-lg text-brand-gold">Agende o Horário</h3>
+                    <p class="text-gray-300 text-sm font-light">Marcamos a data ideal para o serviço ou entrega do maquinário.</p>
                 </div>
                 <div class="space-y-2">
                     <span class="text-4xl lg:text-5xl font-bold text-brand-gold/30 block">04</span>
-                    <h3 class="font-semibold text-lg text-brand-gold">Serviço Realizado</h3>
-                    <p class="text-gray-300 text-sm font-light">Entrega com limpeza, capricho e a garantia B&B Soluções.</p>
+                    <h3 class="font-semibold text-lg text-brand-gold">Atendimento Concluído</h3>
+                    <p class="text-gray-300 text-sm font-light">Trabalho entregue ou equipamento retirado sem você sair de casa.</p>
                 </div>
             </div>
         </div>
@@ -302,56 +300,53 @@
         </div>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
-                <p class="text-brand-dark text-sm font-light italic">"Trabalho impecável! Instalaram cortinas e suportes com um capricho sem igual, sem deixar poeira."</p>
-                <p class="mt-4 pt-3 border-t border-gray-50 font-semibold text-brand-burgundy text-sm">Mariana Silva <span class="text-xs text-brand-muted font-normal block">Apartamento</span></p>
+                <p class="text-brand-dark text-sm font-light italic">"Trabalho sensacional em Curitiba! Instalaram tudo com extremo capricho, super recomendo as meninas."</p>
+                <p class="mt-4 pt-3 border-t border-gray-50 font-semibold text-brand-burgundy text-sm">Mariana Silva <span class="text-xs text-brand-muted font-normal block">Batel, Curitiba</span></p>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
-                <p class="text-brand-dark text-sm font-light italic">"Contratei para reparos elétricos no escritório. Profissionalismo puro do início ao fim. Recomendo muito."</p>
-                <p class="mt-4 pt-3 border-t border-gray-50 font-semibold text-brand-burgundy text-sm">Carlos Eduardo <span class="text-xs text-brand-muted font-normal block">Escritório Comercial</span></p>
+                <p class="text-brand-dark text-sm font-light italic">"Aluguei a extratora e eles entregaram aqui em Pinhais no horário certinho. Equipamento excelente."</p>
+                <p class="mt-4 pt-3 border-t border-gray-50 font-semibold text-brand-burgundy text-sm">Carlos Eduardo <span class="text-xs text-brand-muted font-normal block">Pinhais / RMC</span></p>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
-                <p class="text-brand-dark text-sm font-light italic">"Aluguei a extratora com o Kit Sofá. Meu estofado parece novo! O atendimento foi excelente."</p>
-                <p class="mt-4 pt-3 border-t border-gray-50 font-semibold text-brand-burgundy text-sm">Beatriz Costa <span class="text-xs text-brand-muted font-normal block">Residência</span></p>
+                <p class="text-brand-dark text-sm font-light italic">"Atendimento impecável! O slogan diz tudo: elas resolvem mesmo! Ganharam uma cliente fiel."</p>
+                <p class="mt-4 pt-3 border-t border-gray-50 font-semibold text-brand-burgundy text-sm">Beatriz Costa <span class="text-xs text-brand-muted font-normal block">Água Verde, Curitiba</span></p>
             </div>
         </div>
     </section>
 
-    <!-- 9. PERGUNTAS FREQUENTES (FAQ ACCORDION VIA ALPINEJS) -->
+    <!-- 9. PERGUNTAS FREQUENTES -->
     <section class="bg-gray-50 py-16 md:py-24 px-4">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-10"><h2 class="text-3xl font-semibold text-brand-burgundy">Dúvidas Frequentes</h2></div>
             <div class="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-gray-100 space-y-4" x-data="{ active: null }">
                 
-                <!-- Pergunta 1 -->
                 <div class="border-b border-gray-100 pb-4">
                     <button @click="active = active === 1 ? null : 1" class="w-full flex justify-between items-center text-left font-medium text-brand-burgundy text-lg py-2 focus:outline-none">
-                        <span>Quais cidades vocês atendem?</span>
+                        <span>Quais cidades e regiões vocês atendem?</span>
                         <span class="text-brand-gold transform transition-transform" :class="active === 1 ? 'rotate-180' : ''">&darr;</span>
                     </button>
                     <div class="text-brand-muted text-sm font-light mt-2 overflow-hidden max-h-0 transition-all duration-300" :style="active === 1 ? 'max-h: 200px' : ''">
-                        Atendemos toda a capital de São Paulo e regiões metropolitanas próximas. Entre em contato informando seu bairro para confirmação.
+                        Atendemos toda a cidade de Curitiba e os principais municípios da Região Metropolitana.
                     </div>
                 </div>
 
-                <!-- Pergunta 2 -->
                 <div class="border-b border-gray-100 pb-4">
                     <button @click="active = active === 2 ? null : 2" class="w-full flex justify-between items-center text-left font-medium text-brand-burgundy text-lg py-2 focus:outline-none">
-                        <span>Como funciona a locação de equipamentos?</span>
+                        <span>Como funciona o sistema de entrega de equipamentos?</span>
                         <span class="text-brand-gold transform transition-transform" :class="active === 2 ? 'rotate-180' : ''">&darr;</span>
                     </button>
                     <div class="text-brand-muted text-sm font-light mt-2 overflow-hidden max-h-0 transition-all duration-300" :style="active === 2 ? 'max-h: 200px' : ''">
-                        Você escolhe o período (24h ou 48h), nós entregamos os equipamentos higienizados com os kits opcionais, explicamos o uso no local e retiramos no prazo combinado.
+                        Não temos ponto físico para retirada. Nós levamos o maquinário limpo e testado até o seu endereço e fazemos a coleta após a finalização do período de locação contratado.
                     </div>
                 </div>
 
-                <!-- Pergunta 3 -->
                 <div class="border-b border-gray-100 pb-4">
                     <button @click="active = active === 3 ? null : 3" class="w-full flex justify-between items-center text-left font-medium text-brand-burgundy text-lg py-2 focus:outline-none">
-                        <span>Precisa de caução para alugar?</span>
+                        <span>Como faço para pedir um orçamento de manutenção?</span>
                         <span class="text-brand-gold transform transition-transform" :class="active === 3 ? 'rotate-180' : ''">&darr;</span>
                     </button>
                     <div class="text-brand-muted text-sm font-light mt-2 overflow-hidden max-h-0 transition-all duration-300" :style="active === 3 ? 'max-h: 200px' : ''">
-                        Trabalhamos de forma simplificada e segura com análise cadastral rápida de CPF/RG e assinatura de contrato digital direto pelo celular, sem burocracias antigas.
+                        Basta clicar nos botões de WhatsApp espalhados pelo site. Se puder mandar uma foto ou vídeo curto do reparo necessário, agiliza muito o nosso retorno!
                     </div>
                 </div>
 
@@ -363,8 +358,8 @@
     <section class="py-20 bg-gradient-to-tr from-brand-burgundyDark to-brand-burgundy text-white text-center px-4">
         <div class="max-w-2xl mx-auto space-y-6">
             <h2 class="text-3xl md:text-4xl font-light">Precisando de ajuda? Conte com a <span class="font-semibold text-brand-gold">B&B Soluções</span>.</h2>
-            <p class="text-gray-300 font-light text-sm">Garantimos pontualidade, segurança de nível corporativo e acabamento residencial impecável.</p>
-            <a href="https://wa.me/5511999999999" target="_blank" class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-goldHover text-brand-burgundy font-bold px-10 py-5 rounded-2xl transition-all shadow-xl text-lg hover:scale-105">
+            <p class="text-gray-300 font-light text-sm">Agilidade, compromisso ético e alto padrão técnico. Deixe que <strong>Elas Resolvem!</strong></p>
+            <a href="https://wa.me/5541985381967?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20B&B%20Soluções!" target="_blank" class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-goldHover text-brand-burgundy font-bold px-10 py-5 rounded-2xl transition-all shadow-xl text-lg hover:scale-105">
                 Solicitar Orçamento no WhatsApp
             </a>
         </div>
@@ -375,33 +370,34 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div class="space-y-3">
                 <div class="text-white font-bold text-xl">B&B <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase border-l pl-2 ml-1">Soluções</span></div>
-                <p class="font-light text-xs max-w-xs leading-relaxed">Manutenção e reparos sob gestão feminina com o mais alto padrão de qualidade e responsabilidade executiva.</p>
+                <p class="font-light text-xs max-w-xs leading-relaxed">Manutenção residencial, comercial e sistema de locação delivery sob gestão feminina de alta performance. Elas Resolvem!</p>
             </div>
             <div class="space-y-2">
                 <h4 class="text-white font-medium text-xs uppercase tracking-wider mb-2 text-brand-gold">Contato</h4>
-                <p>📞 (11) 99999-9999</p>
-                <p>✉ contato@bebsolucoes.com.br</p>
+                <p>📞 (41) 98538-1967</p>
+                <p>✉ bbsolucoes1@gmail.com</p>
             </div>
             <div class="space-y-2">
-                <h4 class="text-white font-medium text-xs uppercase tracking-wider mb-2 text-brand-gold">Localização</h4>
-                <p>📍 Av. Paulista, 1000 - Bela Vista<br>São Paulo - SP, 01310-100</p>
+                <h4 class="text-white font-medium text-xs uppercase tracking-wider mb-2 text-brand-gold">Área de Atendimento</h4>
+                <p>📍 Atendimento exclusivo a domicílio</p>
+                <p class="text-xs text-gray-500">Curitiba e Região Metropolitana — Sistema Leva e Busca</p>
             </div>
         </div>
         <div class="max-w-6xl mx-auto pt-6 border-t border-white/5 text-center text-xs font-light flex flex-col sm:flex-row justify-between gap-4">
             <p>&copy; 2026 B&B Soluções. Todos os direitos reservados.</p>
-            <p class="text-gray-600">Premium Single File Layout.</p>
+            <p class="text-gray-600">Curitiba • Atendimento Home Delivery</p>
         </div>
     </footer>
 
     <!-- BOTÕES FLUTUANTES FIXOS (WHATSAPP, INSTAGRAM, EMAIL) -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <a href="https://wa.me/5511999999999" target="_blank" aria-label="Chamar no WhatsApp" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all">
+        <a href="https://wa.me/5541985381967?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20B&B%20Soluções!" target="_blank" aria-label="Chamar no WhatsApp" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all">
             <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.453L0 24zm6.59-4.846c1.66.986 3.288 1.479 5.342 1.48 5.389 0 9.772-4.377 9.775-9.755.002-2.605-1.01-5.055-2.85-6.898C17.076 2.138 14.63 1.12 12.015 1.12c-5.393 0-9.778 4.379-9.781 9.758-.001 2.105.56 4.15 1.621 5.922l-.993 3.626 3.784-.992z"/></svg>
         </a>
-        <a href="https://instagram.com" target="_blank" aria-label="Acessar Instagram" class="w-12 h-12 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all">
+        <a href="https://www.instagram.com/bb.solucoes?igsh=NG5vaWk0OHY4anBm" target="_blank" aria-label="Acessar Instagram" class="w-12 h-12 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all">
             <svg class="w-5 h-5 stroke-white fill-none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
-        <a href="mailto:contato@bebsolucoes.com.br" aria-label="Enviar E-mail" class="w-12 h-12 bg-brand-burgundy text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all border border-white/10">
+        <a href="mailto:bbsolucoes1@gmail.com" aria-label="Enviar E-mail" class="w-12 h-12 bg-brand-burgundy text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all border border-white/10">
             <svg class="w-5 h-5 fill-none stroke-white" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         </a>
     </div>
