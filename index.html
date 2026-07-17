@@ -23,7 +23,7 @@
 
     <style>
         /* ==========================
-        PALETA DE CORES CONFORTÁVEL
+        PALETA DE CORES CONFORTÁVEL (ESTILO NOVO)
         ========================== */
         :root {
             --bordo: #5C0F19;           
@@ -108,7 +108,7 @@
         }
 
         /* ==========================
-        HEADER
+        HEADER MINIMALISTA
         ========================== */
         header {
             position: fixed;
@@ -156,7 +156,7 @@
         }
 
         /* ==========================
-        BANNER PRINCIPAL (HERO COM IMAGEM RETORNADA)
+        BANNER PRINCIPAL (ESTILO NOVO FLUTUANTE + IMAGEM ANTIGA)
         ========================== */
         .hero {
             margin: 110px 40px 40px 40px; 
@@ -168,6 +168,7 @@
             align-items: center;
             text-align: center;
             padding: 60px 20px;
+            /* Junção: Formato moderno "card" com a imagem de fundo original */
             background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('bannerbb.jpeg');
             background-size: cover;
             background-position: center;
@@ -239,7 +240,7 @@
         }
 
         /* ==========================
-        SERVIÇOS DE REPARO
+        SERVIÇOS DE REPARO (GRID DE 4 COLUNAS - NOVO)
         ========================== */
         .cards-servicos {
             display: grid;
@@ -297,7 +298,7 @@
         }
 
         /* ==========================
-        LOCAÇÃO DE EQUIPAMENTOS
+        LOCAÇÃO DE EQUIPAMENTOS (DESIGN NOVO COM BADGES)
         ========================== */
         .locacao-secao-titulo {
             font-family: 'Cormorant Garamond', serif;
@@ -416,7 +417,7 @@
         }
 
         /* ==========================
-        ANTES E DEPOIS
+        ANTES E DEPOIS (ESTILO LADO A LADO)
         ========================== */
         .antes-depois-grid {
             display: grid;
@@ -479,7 +480,7 @@
         }
 
         /* ==========================
-        COMO FUNCIONA
+        COMO FUNCIONA (CRONOGRAMA NOVO)
         ========================== */
         .como-funciona-grid {
             display: grid;
@@ -536,7 +537,7 @@
         }
 
         /* ==========================
-        QUEM SOMOS (FOTO RETORNADA E AJUSTADA)
+        QUEM SOMOS (JUNÇÃO: BOX MODERNO + FOTO ANTIGA)
         ========================== */
         .quem-box {
             background-color: var(--bordo);
@@ -600,7 +601,7 @@
         }
 
         /* ==========================
-        DEPOIMENTOS
+        DEPOIMENTOS 
         ========================== */
         .depoimentos-grid {
             display: grid;
@@ -665,7 +666,9 @@
             color: var(--texto-suave);
         }
 
-        /* PORTFÓLIO */
+        /* ==========================
+        PORTFÓLIO (GRID REFINADO)
+        ========================== */
         .portfolio {
             display: grid;
             grid-template-columns: repeat(5, 1fr); 
@@ -705,7 +708,7 @@
         }
 
         /* ==========================
-        FAQ AS SANFONA
+        FAQ AS SANFONA (INTERATIVO NOVO)
         ========================== */
         .faq-grid {
             display: flex;
@@ -952,7 +955,7 @@
         }
 
         /* ==========================
-        RESPONSIVIDADE AJUSTADA
+        RESPONSIVIDADE INTELIGENTE
         ========================== */
         @media(max-width: 992px) {
             .cards-servicos {
@@ -1079,7 +1082,7 @@
                 Sem estresse, sem surpresas e com hora marcada em Curitiba e Região Metropolitana.
             </div>
             <div class="hero-buttons">
-                <a href="https://wa.me/5541985381967?text=Olá! Gostaria de solicitar um orçamento para services residenciais." target="_blank" class="btn">
+                <a href="https://wa.me/5541985381967?text=Olá! Gostaria de solicitar um orçamento para serviços residenciais." target="_blank" class="btn">
                     <i class="fab fa-whatsapp"></i> Solicite um Orçamento
                 </a>
             </div>
@@ -1251,7 +1254,7 @@
         </div>
     </section>
 
-    <!-- 5. QUEM SOMOS (FOTO E ESTRUTURA MESCLADAS) -->
+    <!-- 5. QUEM SOMOS -->
     <section id="quem" class="bg-confort">
         <div class="title-wrapper">
             <h2 class="section-title">Quem Somos</h2>
@@ -1360,7 +1363,7 @@
         </div>
     </section>
 
-    <!-- 8. PERGUNTAS FREQUENTES -->
+    <!-- 8. PERGUNTAS FREQUENTES (SANFONA INTERATIVA) -->
     <section id="faq" class="bg-alternado">
         <div class="title-wrapper">
             <h2 class="section-title">Dúvidas Frequentes</h2>
@@ -1469,7 +1472,7 @@
 
     <!-- SCRIPTS INTERATIVOS -->
     <script>
-        // Lightbox para Ampliar Fotos
+        // Lightbox para Ampliar Fotos do Portfólio
         const imagens = document.querySelectorAll('.portfolio-item img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -1485,7 +1488,7 @@
             lightbox.style.display = 'none';
         });
 
-        // FAQ Interativo
+        // FAQ Interativo (Efeito Sanfona)
         const faqCards = document.querySelectorAll('.faq-card');
         faqCards.forEach(card => {
             const pergunta = card.querySelector('.faq-pergunta');
