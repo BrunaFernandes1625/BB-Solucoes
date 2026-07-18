@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B&B Soluções | Manutenção Residencial e Locação em Curitiba e RM</title>
-    <meta name="description" content="Pequenos reparos, instalações residenciais e locação de extratoras e lavadoras em Curitiba e Região Metropolitana. Serviço por mulheres com segurança.">
+    <meta name="description" content="Pequenos reparos, instalações residenciais e locação de extratoras e lavadoras in Curitiba e Região Metropolitana. Serviço por mulheres com segurança.">
     <meta name="keywords" content="marido de aluguel curitiba, faz tudo curitiba, locação de extratora curitiba, aluguel lavadora alta pressão curitiba, pequenos reparos curitiba">
     <meta name="robots" content="index, follow">
     <meta name="author" content="B&B Soluções">
 
     <meta property="og:title" content="B&B Soluções">
-    <meta property="og:description" content="Pequenos reparos, instalações e locação de extratoras e lavadoras in Curitiba e Região Metropolitana.">
+    <meta property="og:description" content="Pequenos reparos, instalações e locação de extratoras e lavadoras em Curitiba e Região Metropolitana.">
     <meta property="og:image" content="bannerbb.jpeg">
     <meta property="og:type" content="website">
 
@@ -37,6 +37,7 @@
             --verde-whatsapp: #25D366;
             --azul-maps: #4285F4;
             --vermelho-gmail: #EA4335;
+            --estrela-amarela: #FFC107;
         }
 
         *, *::before, *::after {
@@ -118,10 +119,16 @@
             height: 85px; 
         }
 
+        .logo {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
         .logo img {
-            height: 65px; 
+            height: 55px;
             width: auto;
-            border-radius: 8px;
+            border-radius: 4px;
             display: block;
             transition: transform 0.3s;
         }
@@ -152,13 +159,13 @@
             margin: 115px 40px 30px 40px; 
             border-radius: 20px;
             position: relative;
-            min-height: 45vh; 
+            min-height: 40vh; 
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(rgba(20, 18, 18, 0.65), rgba(20, 18, 18, 0.65)), url('bannerbb.jpeg');
+            padding: 35px 20px;
+            background: linear-gradient(rgba(25, 23, 23, 0.75), rgba(25, 23, 23, 0.75)), url('bannerbb.jpeg');
             background-size: cover;
             background-position: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -167,42 +174,42 @@
         .hero-content { max-width: 800px; }
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 48px; 
+            font-size: 44px; 
             font-weight: 700;
             color: white;
             margin-bottom: 2px;
         }
 
         .hero-slogan {
-            font-size: 15px; 
+            font-size: 14px; 
             font-weight: 700;
             color: var(--dourado);
             letter-spacing: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .hero-text {
-            font-size: 16px; 
+            font-size: 15px; 
             color: #F0F0F0;
             max-width: 650px;
             margin: 0 auto;
         }
 
         .hero-frase {
-            margin-top: 10px;
-            font-size: 14px;
+            margin-top: 8px;
+            font-size: 13px;
             font-style: italic;
             color: #F8E7B0;
         }
 
         .hero-buttons {
-            margin-top: 25px; 
+            margin-top: 20px; 
             display: flex;
             justify-content: center;
         }
 
         .btn {
-            padding: 12px 30px; 
+            padding: 12px 28px; 
             border-radius: 50px; 
             font-weight: 700;
             font-size: 13px;
@@ -232,7 +239,7 @@
             background-color: var(--bordo);
             color: white;
             border-radius: 20px;
-            padding: 35px 4%; 
+            padding: 40px 5%; 
             box-shadow: 0 10px 25px rgba(92, 15, 25, 0.12);
             max-width: 1100px;
             margin: 0 auto;
@@ -240,29 +247,28 @@
 
         .quem-grid {
             display: grid;
-            grid-template-columns: 1fr 1.3fr; 
+            grid-template-columns: 1fr 1.2fr; 
             gap: 40px;
             align-items: center;
         }
 
         .quem-img-container {
             width: 100%;
-            max-width: 350px; 
-            margin: 0 auto;
+            height: 320px;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
             border: 2px solid var(--dourado);
+            overflow: hidden;
         }
 
         .quem-grid img { 
             width: 100%; 
-            height: auto; 
-            object-fit: contain; 
+            height: 100%; 
+            object-fit: cover; 
             display: block; 
-            border-radius: 10px;
         }
         
-        .quem-content p { line-height: 1.6; margin-bottom: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.9); }
+        .quem-content p { line-height: 1.6; margin-bottom: 14px; font-size: 14px; color: rgba(255, 255, 255, 0.9); }
 
         .destaque-container {
             display: grid;
@@ -421,22 +427,24 @@
         .tag-lado.depois { background: var(--bordo); color: var(--dourado); }
 
         /* ==========================
-        DEPOIMENTOS (CAIXAS MAIS DESTACADAS)
+        DEPOIMENTOS (CAIXAS COM DESTAQUE)
         ========================== */
         .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
         .depoimento-card { 
             background: var(--branco-card); 
-            padding: 25px; 
+            padding: 28px; 
             border-radius: 16px; 
-            box-shadow: 0 6px 20px rgba(92, 15, 25, 0.05); 
+            box-shadow: 0 8px 24px rgba(92, 15, 25, 0.08); 
             border: 1.5px solid rgba(184, 142, 48, 0.25); 
             display: flex; 
             flex-direction: column; 
             justify-content: space-between; 
+            transition: transform 0.3s;
         }
-        .estrelas { color: var(--dourado); margin-bottom: 12px; font-size: 15px; text-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .depoimento-card:hover { transform: translateY(-3px); }
+        .estrelas { color: var(--estrela-amarela); margin-bottom: 12px; font-size: 16px; }
         .depoimento-texto { font-size: 13px; font-style: italic; color: var(--texto-suave); line-height: 1.5; margin-bottom: 12px; }
-        .autor-info { display: flex; align-items: center; gap: 10px; }
+        .autor-info { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
         .autor-avatar { width: 36px; height: 36px; background: var(--bordo-suave); color: var(--bordo); font-weight: 700; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 13px; }
         .autor-nome h5 { font-size: 13px; color: var(--bordo); font-weight: 700; }
         .autor-nome p { font-size: 11px; color: var(--texto-suave); }
@@ -510,18 +518,23 @@
         .faq-resposta { 
             max-height: 0; 
             overflow: hidden; 
-            transition: max-height 0.3s ease-out, padding 0.3s ease; 
+            transition: max-height 0.3s ease-out; 
             padding: 0 18px; 
             font-size: 13px; 
             line-height: 1.6; 
             color: var(--texto-suave); 
             background: #FAF8F5; 
         }
-        .faq-card.ativo .faq-resposta { padding: 0 18px 18px 18px; max-height: 300px; }
+        
+        /* Classe acionada pelo JavaScript */
+        .faq-card.ativo .faq-resposta { 
+            padding-bottom: 18px; 
+            max-height: 200px; 
+        }
         .faq-card.ativo .faq-pergunta i.seta { transform: rotate(180deg); }
 
         /* ==========================
-        SEÇÃO DE CONTATO (4 CAIXINHAS)
+        SEÇÃO DE CONTATO (4 CAIXINHAS CLICÁVEIS)
         ========================== */
         .contato-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1100px; margin: 0 auto; }
         .contato-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 12px; border-radius: 12px; background: var(--branco-card); box-shadow: 0 3px 12px rgba(0,0,0,0.02); transition: all 0.3s; border: 1px solid rgba(92, 15, 25, 0.06); }
@@ -535,7 +548,7 @@
         .contato-card p { font-size: 11px; color: var(--texto-suave); text-align: center; }
 
         /* ==========================
-        RODAPÉ (BEM ENXUTO)
+        RODAPÉ (DISCRETO E ENXUTO)
         ========================== */
         footer { background: var(--bordo); color: white; padding: 15px 10px; text-align: center; border-top: 2px solid var(--dourado); }
         .footer-copy { font-size: 11px; opacity: 0.75; }
@@ -557,13 +570,14 @@
         @media(max-width: 768px) {
             section { padding: 45px 5%; }
             header { padding: 10px 5%; height: 75px; }
-            .logo img { height: 52px; }
+            .logo img { height: 45px; }
             nav a { font-size: 11px; padding: 6px 8px; }
             .hero { margin: 95px 15px 25px 15px; border-radius: 16px; padding: 35px 15px; min-height: auto; }
             .hero h1 { font-size: 32px; }
             .hero-slogan { font-size: 13px; letter-spacing: 3px; }
             .hero-text { font-size: 14px; }
             .depoimentos-grid, .antes-depois-grid, .quem-grid, .destaque-container, .locacao-individual-grid, .kits-individual-grid { grid-template-columns: 1fr; gap: 20px; }
+            .quem-img-container { height: 260px; }
             .section-title { font-size: 30px; }
             .portfolio-slider-container { padding: 0 5px; }
             .slider-btn { display: none; } 
@@ -595,7 +609,7 @@
         </nav>
     </header>
 
-    <!-- BANNER PRINCIPAL (MAIS DELICADO, MENOR E COM FUNDO SUAVE) -->
+    <!-- BANNER PRINCIPAL (DELICADO, MENOR E COM FUNDO REFORMULADO) -->
     <section class="hero">
         <div class="hero-content">
             <h1>B&B Soluções</h1>
@@ -615,7 +629,7 @@
         </div>
     </section>
 
-    <!-- 1. QUEM SOMOS (AGORA NO TOPO E INVERTIDO: FOTO ESQUERDA, TEXTO DIREITA) -->
+    <!-- 1. QUEM SOMOS (REORDENADO PARA O TOPO E COM LAYOUT INVERTIDO) -->
     <section id="quem" class="bg-confort">
         <div class="title-wrapper">
             <h2 class="section-title">Quem Somos</h2>
@@ -781,7 +795,7 @@
         </div>
     </section>
 
-    <!-- 5. DEPOIMENTOS (CAIXAS MAIS DESTACADAS) -->
+    <!-- 5. DEPOIMENTOS (CAIXAS MAIS DESTACADAS COM ESTRELAS) -->
     <section id="depoimentos" class="bg-confort">
         <div class="title-wrapper">
             <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
@@ -866,7 +880,7 @@
         </div>
     </section>
 
-    <!-- 7. PERGUNTAS FREQUENTES (FAQ COM SCRIPT TOTALMENTE FUNCIONAL) -->
+    <!-- 7. PERGUNTAS FREQUENTES (FAQ CORRIGIDO) -->
     <section id="faq" class="bg-confort">
         <div class="title-wrapper">
             <h2 class="section-title">Dúvidas Frequentes</h2>
@@ -875,7 +889,7 @@
         <div class="faq-grid">
             <div class="faq-card">
                 <div class="faq-pergunta">Vocês cobram taxa para fazer orçamento online? <i class="fas fa-chevron-down seta"></i></div>
-                <div class="faq-resposta">Não! O orçamento via WhatsApp é totalmente gratuito. Enviando fotos ou un pequeno vídeo da sua necessidade, calculamos os valores exatos para você de forma rápida.</div>
+                <div class="faq-resposta">Não! O orçamento via WhatsApp é totalmente gratuito. Enviando fotos ou um pequeno vídeo da sua necessidade, calculamos os valores exatos para você de forma rápida.</div>
             </div>
             <div class="faq-card">
                 <div class="faq-pergunta">Como funciona a entrega e retirada das máquinas alugadas? <i class="fas fa-chevron-down seta"></i></div>
@@ -892,7 +906,7 @@
         </div>
     </section>
 
-    <!-- 8. SEÇÃO DE CONTATO (4 CAIXINHAS CLICÁVEIS E DIRETAS) -->
+    <!-- 8. SEÇÃO DE CONTATO (4 CAIXINHAS DIRETAS E INTEGRADAS) -->
     <section id="contato" class="bg-alternado">
         <div class="title-wrapper">
             <h2 class="section-title">Fale Conosco</h2>
@@ -922,7 +936,7 @@
         </div>
     </section>
 
-    <!-- RODAPÉ (PEQUENO E DISCRETO) -->
+    <!-- RODAPÉ (PEQUENO E ENXUTO) -->
     <footer>
         <p class="footer-copy">© 2026 B&B Soluções • Curitiba e Região Metropolitana • Todos os direitos reservados</p>
     </footer>
@@ -950,7 +964,7 @@
             }
         }
 
-        // Lightbox para abrir as fotos do portfólio de forma limpa
+        // Lightbox para abrir as fotos do portfólio
         const imagens = document.querySelectorAll('.portfolio-item img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -966,7 +980,7 @@
             lightbox.style.display = 'none';
         });
 
-        // Script do FAQ - Corrigido para abrir e fechar as respostas
+        // Script do FAQ corrigido e funcional
         const faqCards = document.querySelectorAll('.faq-card');
         faqCards.forEach(card => {
             const pergunta = card.querySelector('.faq-pergunta');
